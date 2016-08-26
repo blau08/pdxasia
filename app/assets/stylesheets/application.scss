@@ -64,6 +64,7 @@ body { padding-top: 70px; }
   }
 }
 @media ( min-width: 992px ) {.col-md-2 { width: inherit; }}
+@media ( max-width: 992px ) {.col-md-2 { text-align: center; }}
 
 @media (max-width: 1354px) {
     .navbar-header {

@@ -175,7 +175,9 @@
       <div class="col-md-2 col-xs-6">
         <div class="food-item">
           <div class="food-image">
-            <%= link_to image_tag(shop.image.url(:small), class: "food-image-tag") %>
+            <%= link_to shop_path(shop) do %>
+              <%= image_tag(shop.image.url(:small), class: "food-image-tag") %>
+            <% end %>
           </div>
           <div class="food-text">
             <%= link_to shop.name, shop_path(shop) %>

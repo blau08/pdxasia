@@ -1,0 +1,16 @@
+<%= render "layouts/errors", :object => @community %>
+
+<%= form_for @community, html: { multipart: true } do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :address %>:
+  <%= f.text_field :address %><br />
+
+  <%= f.label :number %>:
+  <%= f.text_field :number %><br />
+
+  <%= f.file_field :image %>
+
+  <%= f.submit %>
+<% end %>

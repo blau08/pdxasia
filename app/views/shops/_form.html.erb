@@ -1,0 +1,13 @@
+<%= render "layouts/errors", :object => @shop %>
+
+<%= form_for @shop, html: { multipart: true } do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :address %>:
+  <%= f.text_field :address %><br />
+
+  <%= f.file_field :image %>
+
+  <%= f.submit %>
+<% end %>

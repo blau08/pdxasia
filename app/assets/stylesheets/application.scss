@@ -135,24 +135,25 @@ body { padding-top: 70px; }
   margin-top: -9px;
 }
 
-.carousel-image-center { margin: auto; }
 .carousel-control {
   width: 0;
   .glyphicon-chevron-right {
-    margin-right: 15px;
+    margin-right: 0;
     margin-top: -20px;
-    font-size: 50px;
+
   }
   .glyphicon-chevron-left {
-    margin-left: -5px;
-    font-size: 50px;
+    margin-left: 0;
     margin-top: -20px;
   }
 }
 .food-image { border-radius: 50%; }
-.food-row { margin-left: 0 }
-.demographic-statistics { background-color: $blue; height: 60px; margin: 0 15px; font-size: 35px; color: $white; box-shadow: 0px 1px 1px #888888; border-top-color: rgba(0, 0, 0, 0.075); }
-@media ( max-width: 992px ) {.demographic-statistics { height: 155px; }}
+.food-row {  }
+.food-item { text-align: center; }
+.food-row-image {}
+.food-row-text {}
+
+.demographic-statistics { background-color: $blue; font-size: 35px; color: $white; box-shadow: 0px 1px 1px #888888; border-top-color: rgba(0, 0, 0, 0.075); }
 .stat-div { float: left; margin-top: 10px; margin-left: 20px; }
 .stat-text { font-size: 13px; color: #ccc; }
 .stat-number { font-size: 16px; font-weight: bold; }

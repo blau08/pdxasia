@@ -13,7 +13,7 @@ p, div {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-body { padding-top: 70px; }
+body { padding-top: 70px; background-color: aliceblue;}
 
 .navbar-fixed-top {
   color: $white;
@@ -147,11 +147,11 @@ body { padding-top: 70px; }
     margin-top: -20px;
   }
 }
-.food-image { border-radius: 50%; }
-.food-row {  }
+.food-image-tag { border-radius: 50%; border: 2px solid #ccc; }
+#food-row { padding: 0 3.5%;}
 .food-item { text-align: center; }
-.food-row-image {}
-.food-row-text {}
+.food-image {}
+.food-text { max-height: 82px; max-width: 100%; font-size: 25px; a { color: black; text-align: center;}}
 
 .demographic-statistics { background-color: $blue; font-size: 35px; color: $white; box-shadow: 0px 1px 1px #888888; border-top-color: rgba(0, 0, 0, 0.075); }
 .stat-div { float: left; margin-top: 10px; margin-left: 20px; }

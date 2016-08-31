@@ -170,20 +170,18 @@
   </div>
 </div>
 <div class="container-fluid restaurants-row">
-  <div class="row">
-    <div class="food-row">
-      <% @foods.each do |food| %>
-        <div class="col-md-2 col-xs-6">
-          <div class="food-item">
-            <div class="food-row-image">
-              <%= link_to image_tag(food.image.url(:small), class: "food-image") %>
-            </div>
-            <div class="food-row-text">
-              <%= link_to food.name, food_path(food) %>
-            </div>
+  <div id="food-row" class="row">
+    <% @foods.each do |food| %>
+      <div class="col-md-2 col-xs-6">
+        <div class="food-item">
+          <div class="food-image">
+            <%= link_to image_tag(food.image.url(:small), class: "food-image-tag") %>
+          </div>
+          <div class="food-text">
+            <%= link_to food.name, food_path(food) %>
           </div>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>

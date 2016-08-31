@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'shops/index'
+
+  get 'shops/create'
+
+  get 'shops/new'
+
+  get 'shops/edit'
+
+  get 'shops/show'
+
+  get 'shops/update'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,17 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'shops/index'
-
-  get 'shops/create'
-
-  get 'shops/new'
-
-  get 'shops/edit'
-
-  get 'shops/show'
-
-  get 'shops/update'
-
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -21,6 +9,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :foods
+  resources :shops
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

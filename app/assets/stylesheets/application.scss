@@ -154,7 +154,7 @@ body { padding-top: 70px; background-color: aliceblue;}
 .food-text { height: 2.5em; margin: auto; font-size: 25px; margin-top: 5px; line-height: 25px; word-wrap: break-word; width: 200px; a { color: black; text-align: center;}}
 
 .demographic-statistics { background-color: $blue; font-size: 35px; color: $white; box-shadow: 0px 1px 1px #888888; border-top-color: rgba(0, 0, 0, 0.075); }
-.stat-div { float: left; margin-top: 10px; margin-left: 20px; }
+.stat-div { float: left; margin: 10px 20px;}
 .stat-text { font-size: 13px; color: #ccc; }
 .stat-number { font-size: 16px; font-weight: bold; }
 .restaurants-row { margin-top: 15px; }

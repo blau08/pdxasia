@@ -1,6 +1,12 @@
 class FoodsController < ApplicationController
+
+  add_breadcrumb "Home", :root_path
+  add_breadcrumb "Foods", :foods_path
+
   def index
     @foods = Food.all.order(:name)
+
+    add_breadcrumb "index", foods_path
   end
 
   def create
@@ -22,6 +28,8 @@ class FoodsController < ApplicationController
 
   def show
     @food = Food.find(params[:id])
+
+    add_breadcrumb @food.name, food_path([:id])
   end
 
   def update
@@ -38,6 +46,6 @@ class FoodsController < ApplicationController
 
   private
   def food_params
-    params.require(:food).permit(:name, :address, :image)
+    params.require(:food).permit(:name, :address, :image, :yelp)
   end
 end

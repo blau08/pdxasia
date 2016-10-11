@@ -7,6 +7,8 @@ gem 'rails_serve_static_assets'
 gem 'rails_12factor'
 gem 'aws-sdk', '~> 2.3'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
+gem "breadcrumbs_on_rails"
+gem 'owlcarousel-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

@@ -54,7 +54,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="container-fluid no-padding">
-  <div class="food-background img-responsive">
+  <div class="food-background img-responsive" style="background-image: url(<%= @food.image %>);">
     <div class="breadcrumbs">
       <%= render_breadcrumbs :separator => ' > ' %>
     </div>

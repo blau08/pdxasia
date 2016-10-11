@@ -54,12 +54,16 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="container-fluid no-padding">
-  <div class="food-background img-responsive" style="background-image: url(<%= @food.image %>);">
-    <div class="breadcrumbs">
-      <%= render_breadcrumbs :separator => ' > ' %>
+  <div class="banner-section">
+    <div class="food-bg-wrap">
+      <div class="food-background img-responsive" style="background-image: url(<%= @food.image %>);">
+      </div>
     </div>
     <div class="food-title">
       <%= @food.name %>
+    </div>
+    <div class="breadcrumbs">
+      <%= render_breadcrumbs :separator => ' > ' %>
     </div>
   </div>
 </div>

@@ -9,8 +9,10 @@
 
   <%= f.label :yelp %>:
   <%= f.text_field :yelp %><br />
-
+  <%= f.label :image %>: Cover Photo
   <%= f.file_field :image %>
+  <br>
+  <%= f.label :pictures %>: Gallery 
   <%= f.fields_for :pictures do |picture_fields| %>
   <p>
     <%= picture_fields.file_field :image %>

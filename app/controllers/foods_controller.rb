@@ -11,10 +11,8 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(food_params)
-    binding.pry
     respond_to do |format|
       if @food.save
-        binding.pry
         if params[:images]
           params[:images].each { |image|
             @food.pictures.create(image: image)
@@ -22,7 +20,6 @@ class FoodsController < ApplicationController
         end
         format.html { redirect_to @food, notice: 'Gallery was successfully created.' }
         format.json { render json: @food, status: :created, location: @food }
-        # redirect_to foods_path
       else
         render :new
       end

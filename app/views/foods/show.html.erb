@@ -74,6 +74,11 @@
       <div class="item">
         <%= image_tag @food.image %>
       </div>
+      <% @food.pictures.each do |picture| %>
+        <div class="item">
+          <%= image_tag picture.image %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

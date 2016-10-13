@@ -11,15 +11,27 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(food_params)
-    if @food.save
-      redirect_to foods_path
-    else
-      render :new
+    binding.pry
+    respond_to do |format|
+      if @food.save
+        binding.pry
+        if params[:images]
+          params[:images].each { |image|
+            @food.pictures.create(image: image)
+          }
+        end
+        format.html { redirect_to @food, notice: 'Gallery was successfully created.' }
+        format.json { render json: @food, status: :created, location: @food }
+        # redirect_to foods_path
+      else
+        render :new
+      end
     end
   end
 
   def new
     @food = Food.new
+    5.times { @food.pictures.build }
   end
 
   def edit
@@ -46,6 +58,6 @@ class FoodsController < ApplicationController
 
   private
   def food_params
-    params.require(:food).permit(:name, :address, :image, :yelp)
+    params.require(:food).permit(:name, :address, :image, :yelp, :pictures_attributes => [:image] )
   end
 end

@@ -12,6 +12,9 @@
   <%= f.label :yelp %>:
   <br>
   <%= f.text_field :yelp %>
+	<br>
+	<br>
+	<%= f.text_field :bio, placeholder: "Add biography" %>
   <br>
   <br>
   <%= f.label :image %>: Cover Photo
@@ -21,6 +24,12 @@
   <%= f.fields_for :pictures do |picture_fields| %>
   <p>
     <%= picture_fields.file_field :image %>
+  </p>
+  <% end %>
+  <%= f.label :categories %>: Category
+  <%= f.fields_for :categories do |category_fields| %>
+  <p>
+    <%= category_fields.text_field :name %>
   </p>
   <% end %>
 

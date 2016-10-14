@@ -72,11 +72,11 @@
     <div class="col-xs-12 col-md-offset-1 col-md-10">
       <div id="owl-carousel">
         <div class="item img-responsive">
-          <%= image_tag @food.image %>
+          <%= image_tag @food.image.url(:small) %>
         </div>
         <% @food.pictures.each do |picture| %>
           <div class="item img-responsive">
-            <%= image_tag(picture.image.url(:medium)) %>
+            <%= image_tag(picture.image.url(:small)) %>
           </div>
         <% end %>
       </div>
@@ -89,6 +89,12 @@
   <%= @food.name %>
   <br>
   <%= @food.address %>
+  <br>
+  <%= @food.bio %>
+  <br>
+  <% @food.categories.each do |category| %>
+		<%= category.name %> | 
+	<% end %>
   <br>
   <%= link_to @food.yelp %>
   <br>

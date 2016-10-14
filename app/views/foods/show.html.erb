@@ -14,7 +14,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#"><i class="fa fa-cutlery" aria-hidden="true"></i> Food<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="/foods"><i class="fa fa-cutlery" aria-hidden="true"></i> Food<span class="sr-only">(current)</span></a></li>
         <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
         <li><a href="/shops"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shopping</a></li>
         <li><a href="/communities"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Community</a></li>
@@ -71,12 +71,12 @@
   <div class="row no-margin">
     <div class="col-xs-12 col-md-offset-1 col-md-10">
       <div id="owl-carousel">
-        <div class="item">
+        <div class="item img-responsive">
           <%= image_tag @food.image %>
         </div>
         <% @food.pictures.each do |picture| %>
-          <div class="item">
-            <%= image_tag picture.image %>
+          <div class="item img-responsive">
+            <%= image_tag(picture.image.url(:medium)) %>
           </div>
         <% end %>
       </div>

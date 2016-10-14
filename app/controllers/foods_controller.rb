@@ -33,6 +33,7 @@ class FoodsController < ApplicationController
 
   def edit
     @food = Food.find(params[:id])
+    5.times { @food.pictures.build }
   end
 
   def show

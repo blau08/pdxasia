@@ -60,6 +60,9 @@ body { padding-top: 70px; background-color: aliceblue;}
           }
         }
       }
+      form {
+        background-color: $green;
+      }
     }
   }
 }
@@ -96,7 +99,6 @@ body { padding-top: 70px; background-color: aliceblue;}
     }
     .navbar-nav {
         float: none!important;
-        margin-top: 7.5px;
     }
     .navbar-nav>li {
         float: none;
@@ -121,6 +123,10 @@ body { padding-top: 70px; background-color: aliceblue;}
 		.demographic-statistics {
 			display: none;
 		}
+    .navbar-form {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 }
 .navbar-default {
   background-color: $green;
@@ -129,7 +135,7 @@ body { padding-top: 70px; background-color: aliceblue;}
 }
 
 .navbar-nav li a { padding-top: 25px; padding-bottom: 24px; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;}
-.navbar-form { padding-top: 10px; }
+.navbar-form { padding-top: 10px }
 .navbar-default {
   .navbar-toggle {
     margin-top: 15px;

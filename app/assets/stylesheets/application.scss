@@ -118,6 +118,9 @@ body { padding-top: 70px; background-color: aliceblue;}
        -webkit-box-shadow: none;
        box-shadow: none;
     }
+		.demographic-statistics {
+			display: none;
+		}
 }
 .navbar-default {
   background-color: $green;

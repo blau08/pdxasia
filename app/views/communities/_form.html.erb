@@ -11,6 +11,14 @@
   <%= f.text_field :number %><br />
 
   <%= f.file_field :image %>
+	<br>
+	
+	<%= f.label :pictures %>: Gallery
+	<%= f.fields_for :pictures do |picture_fields| %>
+	<p>
+		<%= picture_fields.file_field :image %>
+	</p>
+	<% end %>
 
   <%= f.submit %>
 <% end %>

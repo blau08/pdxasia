@@ -42,5 +42,52 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-
+  <div class="row">
+    <h4>Food</h4>
+    <% @foods.each do |food| %>
+    <div class="col-md-3 col-width-15 welcome-item-height">
+      <a href="#">
+        <img class="img-responsive">
+        <%= image_tag(food.image.url(:small), class: "card-width-11") %>
+      </a>
+      <h4>
+        <a href="#">
+          <%= food.name %>
+        </a>
+      </h4>
+    </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <h4>Shop</h4>
+    <% @shops.each do |shop| %>
+    <div class="col-md-3 col-width-15 welcome-item-height">
+      <a href="#">
+        <img class="img-responsive">
+        <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
+      </a>
+      <h4>
+        <a href="#">
+          <%= shop.name %>
+        </a>
+      </h4>
+    </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <h4>Community</h4>
+    <% @communities.each do |community| %>
+    <div class="col-md-3 col-width-15 welcome-item-height">
+      <a href="#">
+        <img class="img-responsive">
+        <%= image_tag(community.image.url(:small), class: "card-width-11") %>
+      </a>
+      <h4>
+        <a href="#">
+          <%= community.name %>
+         </a>
+      </h4>
+    </div>
+    <% end %>
+  </div>
 </div>

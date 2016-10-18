@@ -66,14 +66,6 @@ body { padding-top: 70px; background-color: aliceblue;}
     }
   }
 }
-@media only screen and (max-width: 767px) {
-  .navbar-collapse {
-    margin-top: 4px;
-    background-color: $green;
-  }
-}
-@media ( min-width: 992px ) {.col-md-2 { width: inherit; }}
-@media ( max-width: 992px ) {.col-md-2 { text-align: center; }}
 
 
 @media (max-width: 1334px) {
@@ -208,6 +200,23 @@ body { padding-top: 70px; background-color: aliceblue;}
 .card-width-11 {
   width: 11em;
 }
-.col-width-15{
+.col-width-15 {
+  float: left;
   width: 15%;
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-collapse {
+    margin-top: 4px;
+    background-color: $green;
+  }
+}
+@media ( min-width: 992px ) {.col-md-2 { width: inherit; }}
+@media ( max-width: 992px ) {
+  .col-md-2 {
+    text-align: center;
+  }
+  .col-width-15 {
+    width: 25%;
+  }
 }

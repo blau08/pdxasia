@@ -73,24 +73,40 @@
 </div>
 <br>
 <br>
-<div class="">
-  <%= @food.name %>
-  <br>
-  <%= @food.address %>
-  <br>
-  <%= @food.bio %>
-  <br>
-  <% @food.categories.each do |category| %>
-		<%= category.name %> |
-	<% end %>
-  <br>
-  <%= link_to @food.yelp %>
-  <br>
-  <%= link_to "Edit", edit_food_path(@food) %>
-  <br>
-  <!-- <p>
-    <%= link_to "Delete", food_path(@food), method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
-  </p> -->
+<div class="container">
+  <div class="col-md-4">
+    <div class="well">
+      <h4>Contact</h4>
+      <%= @food.name %>
+      <br>
+      <%= @food.address %>
+      <br>
+      <%= @food.bio %>
+      <br>
+      <%= link_to @food.yelp %>
+      <br>
+      <%= link_to "Edit", edit_food_path(@food) %>
+      <br>
+      <!-- <p>
+        <%= link_to "Delete", food_path(@food), method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
+      </p> -->
+    </div>
+    <div class="well">
+      <h4>Tags</h4>
+      <% @food.categories.each do |category| %>
+        <%= category.name %>
+        <% if @food.categories.count > 1 %>
+          |
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="well">
+      <h4>About</h4>
+      <%= @food.bio %>
+    </div>
+  </div>
 </div>
 
 <script type="text/javascript">

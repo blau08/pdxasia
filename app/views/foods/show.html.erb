@@ -93,12 +93,13 @@
     </div>
     <div class="well">
       <h4>Tags</h4>
-      <% @food.categories.each do |category| %>
-        <%= category.name %>
-        <% if @food.categories.count > 1 %>
+      <% @food.categories.each_with_index do |category, idx| %>
+        <% if idx > 0 %>
           |
         <% end %>
+        <%= category.name %>
       <% end %>
+      <%= @food.categories.join(' | ') %>
     </div>
   </div>
   <div class="col-md-8">

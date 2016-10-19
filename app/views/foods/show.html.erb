@@ -99,13 +99,16 @@
         <% end %>
         <%= category.name %>
       <% end %>
-      <%= @food.categories.join(' | ') %>
     </div>
   </div>
   <div class="col-md-8">
     <div class="well">
       <h4>About</h4>
       <%= @food.bio %>
+    </div>
+    <div class="well">
+      <h4>Tags</h4>
+      <%= @food.categories.map(&:name).join(' | ') %>
     </div>
   </div>
 </div>

@@ -1,4 +1,7 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<div id="banner">
+
+</div>
+<nav class="navbar navbar-default navbar-fixed-top not-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -14,10 +17,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/foods"><i class="fa fa-cutlery" aria-hidden="true"></i> Food<span class="sr-only">(current)</span></a></li>
-        <li><a href="/events"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
+        <li><a href="#"><i class="fa fa-cutlery" aria-hidden="true"></i> Food<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="/events"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
         <li><a href="/shops"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shopping</a></li>
-        <li class="active"><a href="/communities"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Community</a></li>
+        <li><a href="/communities"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Community</a></li>
         <li><a href="#"><i class="fa fa-video-camera" aria-hidden="true"></i> Videos</a></li>
       </ul>
       <form class="navbar-form navbar-left">
@@ -41,58 +44,6 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="container-fluid no-padding">
-  <div class="banner-section">
-    <div class="food-bg-wrap">
-      <div class="food-background img-responsive" style="background-image: url(<%= @community.image %>);">
-      </div>
-    </div>
-    <div class="food-title">
-      <%= @community.name %>
-    </div>
-    <div class="breadcrumbs">
-      <%= render_breadcrumbs :separator => ' > ' %>
-    </div>
-  </div>
-</div>
-<div class="container-fluid no-padding">
-  <div class="row no-margin">
-    <div class="col-xs-12 col-md-offset-1 col-md-10">
-      <div id="owl-carousel">
-        <div class="item img-responsive">
-          <%= image_tag @community.image.url(:small) %>
-        </div>
-        <% @community.pictures.each do |picture| %>
-          <div class="item img-responsive">
-            <%= image_tag(picture.image.url(:small)) %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
-<br>
-<div class="">
-  <%= @community.name %>
-  <br>
-  <%= @community.address %>
-  <br>
-  <%= @community.bio %>
-  <br>
+<div id="events">
 
-
-  <br>
-  <%= link_to "Edit", edit_community_path(@community) %>
 </div>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("#owl-carousel").owlCarousel({
-            autoPlay: 3000,
-            items : 5,
-            itemsDesktop : [1119,5],
-            itemsDesktopSmall : [979, 5]
-        });
-    });
-</script>

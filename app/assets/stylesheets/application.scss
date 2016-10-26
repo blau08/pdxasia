@@ -6,6 +6,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "events";
 
 $green: #03B160;
 $white: #FFFFFF;
@@ -138,8 +139,8 @@ body { padding-top: 70px; background-color: aliceblue;}
 }
 
 .pdxasialogo {
-  height: 70px;
-  margin-top: -9px;
+  height: 65px;
+  margin-top: -6px;
 }
 
 .carousel-control {

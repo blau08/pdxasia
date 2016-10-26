@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :foods
   resources :shops
   resources :communities
+  resources :events
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

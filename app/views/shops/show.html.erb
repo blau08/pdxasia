@@ -55,7 +55,71 @@
     </div>
   </div>
 </div>
-<%= @shop.name %>
+<div class="container-fluid no-padding">
+  <div class="row no-margin">
+    <div class="col-xs-12 col-md-offset-1 col-md-10">
+      <div id="owl-carousel">
+        <div class="item img-responsive">
+          <%= image_tag @shop.image.url(:small) %>
+        </div>
+        <% @shop.pictures.each do |picture| %>
+          <div class="item img-responsive">
+            <%= image_tag(picture.image.url(:small)) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 <br>
-<%= @shop.address %>
-<%= link_to "Edit", edit_shop_path(@shop) %>
+<br>
+<div class="container">
+  <div class="col-md-4">
+    <div class="well">
+      <h4>Contact</h4>
+      <%= @shop.name %>
+      <br>
+      <%= @shop.address %>
+      <br>
+      <%= @shop.bio %>
+      <br>
+      <%= link_to @shop.yelp %>
+      <br>
+      <%= link_to "Edit", edit_food_path(@shop) %>
+      <br>
+      <!-- <p>
+        <%= link_to "Delete", food_path(@shop), method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
+      </p> -->
+    </div>
+    <div class="well">
+      <h4>Tags</h4>
+      <% @shop.categories.each_with_index do |category, idx| %>
+        <% if idx > 0 %>
+          |
+        <% end %>
+        <%= category.name %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="well">
+      <h4>About</h4>
+      <%= @shop.bio %>
+    </div>
+    <div class="well">
+      <h4>Tags</h4>
+      <%= @shop.categories.map(&:name).join(' | ') %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#owl-carousel").owlCarousel({
+            autoPlay: 3000,
+            items : 5,
+            itemsDesktop : [1119,5],
+            itemsDesktopSmall : [979, 5]
+        });
+    });
+</script>

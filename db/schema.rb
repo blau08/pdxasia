@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015000737) do
+ActiveRecord::Schema.define(version: 20161025232342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20161015000737) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "food_id"
+    t.integer  "shop_id"
+    t.integer  "community"
   end
 
   create_table "communities", force: :cascade do |t|
@@ -59,6 +61,7 @@ ActiveRecord::Schema.define(version: 20161015000737) do
     t.datetime "image_updated_at"
     t.integer  "food_id"
     t.integer  "community_id"
+    t.integer  "shop_id"
   end
 
   create_table "shops", force: :cascade do |t|
@@ -71,6 +74,8 @@ ActiveRecord::Schema.define(version: 20161015000737) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "bio"
+    t.string   "yelp"
+    t.string   "phone"
   end
 
 end

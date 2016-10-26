@@ -48,7 +48,9 @@
     <div class="col-md-3 col-width-15 welcome-item-height col-xs-3">
       <a href="#">
         <img class="img-responsive">
-        <%= image_tag(food.image.url(:small), class: "card-width-11") %>
+        <%= link_to food_path(food) do %>
+          <%= image_tag(food.image.url(:small), class: "card-width-11") %>
+        <% end %>
       </a>
       <h4>
         <a>
@@ -64,7 +66,9 @@
     <div class="col-md-3 col-width-15 welcome-item-height col-xs-3">
       <a href="#">
         <img class="img-responsive">
-        <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
+        <%= link_to shop_path(shop) do %>
+          <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
+        <% end %>
       </a>
       <h4>
         <a>
@@ -80,7 +84,9 @@
     <div class="col-md-3 col-width-15 welcome-item-height col-xs-3">
       <a href="#">
         <img class="img-responsive">
-        <%= image_tag(community.image.url(:small), class: "card-width-11") %>
+        <%= link_to community_path(community) do %>
+          <%= image_tag(community.image.url(:small), class: "card-width-11") %>
+        <% end %>
       </a>
       <h4>
         <a>

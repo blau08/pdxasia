@@ -10,6 +10,10 @@
   background-position: center;
 }
 
-.container .row .navbar-form .form-group { display: inline; float: none !important;}
+.container .row .navbar-form .form-group { float: none !important;}
 
-.input-group-addon { width: 1% !important; }
+.input-group-addon { width: 1% !important; background: #01B0F3; }
+.input-group .form-control { height: 40px; }
+span.glyphicon-search { color: white; }
+.logo { height: 100px; width: 100px; }
+#logo { background: url(logo.jpg) no-repeat center; height: 100px; }

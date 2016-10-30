@@ -86,14 +86,115 @@ Our growing menu consists of a variety of Chinese cuisine unique to Portland. Cu
   File.open(File.join(Rails.root,'public/assets/foods/ls2.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/ls3.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/ls4.jpg'))
-  ]
+  ],
+
+  ["Pho Vietnam",
+  "5440 SE 82nd Ave, Portland, OR 97266",
+  "(503) 772-2148",
+  "https://www.yelp.com/biz/pho-vietnam-portland",
+  "Unassuming Vietnamese restaurant specializing in soups served up in a small shopping plaza.",
+  File.open(File.join(Rails.root,'public/assets/foods/pv1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/pv2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/pv3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/pv4.jpg'))
+  ],
+
+  ["Thai Fresh",
+  "8409 SE Division St, Portland, OR 97266",
+  "(503) 774-2186",
+  "https://www.yelp.com/biz/thai-fresh-portland",
+  "Family-run Thai joint features traditional dishes in a cheerful, modern venue with outdoor seating.",
+  File.open(File.join(Rails.root,'public/assets/foods/tf1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/tf2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/tf3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/tf4.jpg'))
+  ],
+
+  ["Wong's King",
+  "8733 SE Division St #101, Portland, OR 97266",
+  "(503) 788-8883",
+  "https://www.yelp.com/biz/wongs-king-seafood-restaurant-portland",
+  "Dim sum & many Chinese standards offered in a bustling, no-frills banquet-style dining hall.",
+  File.open(File.join(Rails.root,'public/assets/foods/wk1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/wk2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/wk3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/wk4.jpg'))
+  ],
+
+  ["Pho Hung",
+  "3120 SE 82nd Ave, Portland, OR 97266",
+  "(503) 772-0089",
+  "https://www.yelp.com/biz/wongs-king-seafood-restaurant-portland",
+  "Modest offshoot of a small chain providing traditional Vietnamese soups, rice plates & noodle bowls.",
+  File.open(File.join(Rails.root,'public/assets/foods/ph1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/ph2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/ph3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/ph4.jpg'))
+  ],
+
+  ["Saburo's",
+  "1667 SE Bybee Blvd, Portland, OR 97202",
+  "(503) 236-4237",
+  "https://www.yelp.com/biz/saburos-portland",
+  "Nigiri sushi & rolls are super-sized at this bustling, no-frills Japanese restaurant.",
+  File.open(File.join(Rails.root,'public/assets/foods/saburo1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/saburo2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/saburo3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/saburo4.jpg'))
+  ],
+
+  ["Makoto Japanese Buffet",
+  "1119 SE 163rd Pl, Vancouver, WA 98683",
+  "(360) 891-4296",
+  "https://www.yelp.com/biz/makoto-japanese-buffet-vancouver",
+  "Family-friendly destination for all-you-can-eat Japanese buffet including sushi & other dishes.",
+  File.open(File.join(Rails.root,'public/assets/foods/makoto1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/makoto2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/makoto3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/makoto4.jpg'))
+  ],
+
+  ["Minato Seafood Buffet",
+  "1825 SE 164th Ave #110, Vancouver, WA 98683",
+  "(360) 256-2618",
+  "https://www.yelp.com/biz/minato-seafood-buffet-vancouver-2",
+  "Minato Seafood Buffet offers a wide range of traditional and unique Japanese dishes, including sushi and sashimi rolls, buffet options, and more. We are the perfect location for any casual lunch or dinner.",
+  File.open(File.join(Rails.root,'public/assets/foods/minato1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/minato2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/minato3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/minato4.jpg'))
+  ],
+
+  ["Good Taste Noodle House",
+  "7525 SE Tualatin Valley Hwy Hillsboro, OR 97123",
+  "(503) 718-7452",
+  "https://www.yelp.com/biz/good-taste-noodle-house-hillsboro",
+  "Bustling space serving a diverse array of Chinese staples, from congee & chow fun to clay-pot meals.",
+  File.open(File.join(Rails.root,'public/assets/foods/gt1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/gt2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/gt3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/gt4.jpg'))
+  ],
+
+  ["Macau Szechwan Seafood Restaurant",
+  "707 NE 82nd Ave Portland, OR 97220",
+  "(503) 256-3828",
+  "https://www.yelp.com/biz/macau-szechwan-seafood-restaurant-portland",
+  "Macau offers a Sichuan chile fix in NE Portland",
+  File.open(File.join(Rails.root,'public/assets/foods/aomen1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/aomen2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/aomen3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/aomen4.jpg'))
+  ],
 ]
 
 food_list.each do |name, address, phone, yelp, bio, image, b, c, d|
-  food = Food.create( name: name, address: address, phone: phone, yelp: yelp, bio: bio, image: image)
-  food.pictures.create(image: b) if b.present?
-  food.pictures.create(image: c) if c.present?
-  food.pictures.create(image: d) if d.present?
+  if Food.where(name: name).blank?
+    food = Food.create( name: name, address: address, phone: phone, yelp: yelp, bio: bio, image: image)
+    food.pictures.create(image: b) if b.present?
+    food.pictures.create(image: c) if c.present?
+    food.pictures.create(image: d) if d.present?
+  end
 end
 
 shop_list = [
@@ -132,10 +233,12 @@ shop_list = [
 ]
 
 shop_list.each do |name, address, phone, yelp, bio, image, b, c, d|
-  shop = Shop.create( name: name, address: address, phone: phone, yelp: yelp, bio: bio, image: image)
-  shop.pictures.create(image: b) if b.present?
-  shop.pictures.create(image: c) if c.present?
-  shop.pictures.create(image: d) if d.present?
+  if Shop.where(name: name).blank?
+    shop = Shop.create( name: name, address: address, phone: phone, yelp: yelp, bio: bio, image: image)
+    shop.pictures.create(image: b) if b.present?
+    shop.pictures.create(image: c) if c.present?
+    shop.pictures.create(image: d) if d.present?
+  end
 end
 
 community_list = [
@@ -151,8 +254,10 @@ community_list = [
 ]
 
 community_list.each do |name, address, number, bio, image, b, c, d|
-  community = Community.create( name: name, address: address, number: number, bio: bio, image: image)
-  community.pictures.create(image: b) if b.present?
-  community.pictures.create(image: c) if c.present?
-  community.pictures.create(image: d) if d.present?
+  if Community.where(name: name).blank?
+    community = Community.create( name: name, address: address, number: number, bio: bio, image: image)
+    community.pictures.create(image: b) if b.present?
+    community.pictures.create(image: c) if c.present?
+    community.pictures.create(image: d) if d.present?
+  end
 end

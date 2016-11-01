@@ -6,8 +6,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import "events";
-@import "welcome";
 
 $green: #03B160;
 $white: #FFFFFF;
@@ -23,7 +21,7 @@ p, div {
 
 body { padding-top: 70px; background-color: aliceblue;}
 
-.navbar-fixed-top {
+.navbar-default {
   color: $white;
   .container {
     padding: 0 100px;
@@ -87,10 +85,10 @@ body { padding-top: 70px; background-color: aliceblue;}
         display: block;
     }
     .navbar-collapse {
-        // border-top: 1px solid transparent;
-        // box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
     }
-    .navbar-fixed-top {
+    .navbar-default {
         top: 0;
         border-width: 0 0 1px;
     }
@@ -131,10 +129,13 @@ body { padding-top: 70px; background-color: aliceblue;}
 .navbar-default {
   background-color: $green;
   color: $white;
-  height: 70px;
+  top: 0;
+  border-width: 0 0 1px;
+  border-radius: 0;
+  margin-bottom: 0;
 }
 
-.navbar-nav li a { padding-top: 25px; padding-bottom: 24px; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;}
+.navbar-nav li a { padding-top: 25px; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;}
 .navbar-form { padding: 40px 0; }
 .navbar-default {
   .navbar-toggle {
@@ -146,7 +147,7 @@ body { padding-top: 70px; background-color: aliceblue;}
 }
 
 .pdxasialogo {
-  height: 65px;
+  height: 55px;
   margin-top: -6px;
 }
 
@@ -228,3 +229,8 @@ body { padding-top: 70px; background-color: aliceblue;}
     width: 25%;
   }
 }
+
+.social-links { display: block; }
+
+@import "events";
+@import "welcome";

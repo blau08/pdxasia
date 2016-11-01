@@ -154,7 +154,7 @@
 <div class="container-fluid restaurants-row">
   <div id="food-row" class="row">
     <% @foods.each do |food| %>
-      <div class="col-md-2 col-xs-6">
+      <div class="col-md-2 col-xs-4">
         <div class="food-item">
           <div class="food-image">
             <%= link_to food_path(food) do %>
@@ -168,4 +168,51 @@
       </div>
     <% end %>
   </div>
+</div>
+
+<div class="container">
+  <table class="table table-hover table-responsive">
+    <tr>
+      <th>
+        #
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Yelp
+      </th>
+      <th>
+        Address
+      </th>
+      <th>
+        Phone
+      </th>
+      <th>
+        Category
+      </th>
+    </tr>
+    <% @foods.each_with_index do |food, index| %>
+      <tr>
+        <td>
+          <%= index + 1 %>
+        </td>
+        <td>
+          <%= link_to food.name, food_path(food) %>
+        </td>
+        <td>
+          <%= link_to food.yelp, food.yelp %>
+        </td>
+        <td>
+          <%= food.address %>
+        </td>
+        <td>
+          <%= food.phone %>
+        </td>
+        <td>
+          <%= food.categories.first.name %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
 </div>

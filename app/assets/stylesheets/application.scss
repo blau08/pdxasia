@@ -85,16 +85,21 @@ body { padding-top: 70px; background-color: aliceblue;}
 }
 .fa-nav-top { margin-bottom: -10px}
 .fa-nav-bot { margin-top: -5px}
+.font-25 { font-size: 25px; }
+
 @media (max-width: 992px) {
   .fa-nav-top {
-    margin-top: 20px;
-    margin-bottom: -22px;
+    margin-top: 5px;
+    margin-bottom: -31px;
   }
   .fa-nav-bot {
-    margin-top: 24px;
+    margin-top: 20px;
   }
   .navbar-default {
     height: 125px;
+  }
+  .font-25 {
+    font-size: 50px;
   }
 }
 @media (max-width: 767px) {
@@ -166,7 +171,6 @@ body { padding-top: 70px; background-color: aliceblue;}
 
 .social-links { margin-right: -15px;}
 .left-border-white { border-left: 1px solid white; }
-.font-25 { font-size: 25px; }
 .pdxasialogo {
   height: 75px;
 }

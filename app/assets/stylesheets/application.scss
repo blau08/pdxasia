@@ -24,7 +24,7 @@ body { padding-top: 70px; background-color: aliceblue;}
 .navbar-default {
   color: $white;
   .container {
-    padding: 0 100px;
+    // padding: 0 100px;
     color: $white;
     .navbar-header {
       .navbar-brand {
@@ -33,7 +33,7 @@ body { padding-top: 70px; background-color: aliceblue;}
       }
     }
     .navbar-collapse {
-      border-color: transparent;
+      // border-color: transparent;
       border-top: none;
       box-shadow: none;
       // margin-top: 4px;
@@ -73,8 +73,31 @@ body { padding-top: 70px; background-color: aliceblue;}
     }
   }
 }
-
-@media (max-width: 1334px) {
+.navbar-default {
+  background-color: $green;
+  color: $white;
+  top: 0;
+  border-width: 0 0 1px;
+  border-radius: 0;
+  margin-bottom: 0;
+  margin-top: -70px;
+  height: 95px;
+}
+.fa-nav-top { margin-bottom: -5px}
+.fa-nav-bot { margin-top: -5px}
+@media (max-width: 992px) {
+  .fa-nav-top {
+    margin-top: 20px;
+    margin-bottom: -22px;
+  }
+  .fa-nav-bot {
+    margin-top: 24px;
+  }
+  .navbar-default {
+    height: 125px;
+  }
+}
+@media (max-width: 767px) {
     .navbar-header {
         float: none;
     }
@@ -87,10 +110,12 @@ body { padding-top: 70px; background-color: aliceblue;}
     .navbar-collapse {
         border-top: 1px solid transparent;
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        z-index: 2;
     }
     .navbar-default {
         top: 0;
         border-width: 0 0 1px;
+        height: 95px;
     }
     .navbar-collapse.collapse {
         display: none!important;
@@ -126,29 +151,24 @@ body { padding-top: 70px; background-color: aliceblue;}
       margin-bottom: 0;
     }
 }
-.navbar-default {
-  background-color: $green;
-  color: $white;
-  top: 0;
-  border-width: 0 0 1px;
-  border-radius: 0;
-  margin-bottom: 0;
-}
 
-.navbar-nav li a { padding-top: 25px; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;}
+
+.navbar-nav li a { font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;}
 .navbar-form { padding: 40px 0; }
 .navbar-default {
   .navbar-toggle {
-    margin-top: 15px;
+    margin-top: 30px;
     .icon-bar {
       background-color: $white;
     }
   }
 }
 
+.social-links { margin-right: -15px;}
+.left-border-white { border-left: 1px solid white; }
+.font-20 { font-size: 20px; }
 .pdxasialogo {
-  height: 55px;
-  margin-top: -6px;
+  height: 75px;
 }
 
 .carousel-control {
@@ -218,6 +238,7 @@ body { padding-top: 70px; background-color: aliceblue;}
   .navbar-collapse {
     margin-top: 4px;
     background-color: $green;
+    padding: 0 35px;
   }
 }
 @media ( min-width: 992px ) {.col-md-2 { width: inherit; }}

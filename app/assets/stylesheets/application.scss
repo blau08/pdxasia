@@ -86,7 +86,10 @@ body { padding-top: 70px; background-color: aliceblue;}
 .fa-nav-top { margin-bottom: -10px}
 .fa-nav-bot { margin-top: -5px}
 .font-25 { font-size: 25px; }
-
+.col-width-15 {
+  float: left;
+  width: 15%;
+}
 @media (max-width: 992px) {
   .fa-nav-top {
     margin-top: 5px;
@@ -101,7 +104,11 @@ body { padding-top: 70px; background-color: aliceblue;}
   .font-25 {
     font-size: 50px;
   }
+  .col-width-15 {
+    width: 25%;
+  }
 }
+
 @media (max-width: 767px) {
     .navbar-header {
         float: none;
@@ -229,13 +236,10 @@ body { padding-top: 70px; background-color: aliceblue;}
 .welcome-item-height h4 {
   height: 20px;
   overflow: hidden;
+  text-align: center; 
 }
 .card-width-11 {
   width: 11em;
-}
-.col-width-15 {
-  float: left;
-  width: 15%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -245,14 +249,7 @@ body { padding-top: 70px; background-color: aliceblue;}
     padding: 0 35px;
   }
 }
-@media ( max-width: 992px ) {
-  .col-md-2 {
-    text-align: center;
-  }
-  .col-width-15 {
-    width: 25%;
-  }
-}
+
 
 .social-links { display: block; }
 

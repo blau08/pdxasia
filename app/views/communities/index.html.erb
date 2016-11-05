@@ -40,7 +40,7 @@
     </div>
   </div>
 </div>
-<div class="demographic-statistics">
+<!-- <div class="demographic-statistics">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-2 stat-div">
@@ -112,7 +112,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <div class="container-fluid restaurants-row">
   <div id="food-row" class="row">
     <% @communities.each do |community| %>
@@ -124,6 +124,29 @@
           <div class="food-text">
             <%= link_to community.name, community_path(community) %>
           </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @communities.each do |community| %>
+      <div class="col-md-6 col-xs-6 well">
+        <div class="row">
+          <div class="col-md-5 col-xs-5">
+            <div class="community-square">
+              <%= link_to image_tag(community.image.url(:small)) %>
+            </div>
+          </div>
+          <div class="col-md-7 col-xs-7">
+            <%= community.name %>
+            <%= community.address %>
+          </div>
+        </div>
+        <div class="row">
+          <%= community.bio %>
         </div>
       </div>
     <% end %>

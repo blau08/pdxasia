@@ -382,7 +382,19 @@ community_list = [
   File.open(File.join(Rails.root,'public/assets/foods/ahsc2.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/ahsc3.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/ahsc4.jpg'))
-  ]
+],
+
+  ["Yu Miao Chinese Preschool",
+  "5239 SE Woodstock Blvd, Portland, OR 97206",
+  "(503) 775-3767",
+  "Mandarin is quickly becoming a favorite for those wishing to learn a foreign language, and in some business arenas, knowing the language is a must. At AHSC's Yu Miao Chinese Immersion Preschool, children get a head start in the language while learning everything that they would at a typical preschool. Yu Miao also functions as a day care center, allowing families flexibility with drop-off and pickup.
+
+Yu Miao means 'carefully planting and nurturing young sprouts.' Give them good nutrition, and they will grow into great plants. Children are like young sprouts, too. Nurturing them early will help them become great people.",
+  File.open(File.join(Rails.root,'public/assets/foods/ym1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/ym2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/ym3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/ym4.jpg'))
+],
 ]
 
 community_list.each do |name, address, number, bio, image, b, c, d|

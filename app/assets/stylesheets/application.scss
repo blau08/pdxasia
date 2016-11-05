@@ -158,8 +158,8 @@ body { padding-top: 70px; background-color: aliceblue;}
 }
 
 
-.navbar-nav li a { font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;}
-.navbar-form { padding: 40px 0; }
+.navbar-nav li a { font-weight: bold; font-size: 16px; text-transform: uppercase; letter-spacing: 1.5px;}
+.navbar-form { width: 220px; }
 .navbar-default {
   .navbar-toggle {
     margin-top: 30px;
@@ -245,7 +245,6 @@ body { padding-top: 70px; background-color: aliceblue;}
     padding: 0 35px;
   }
 }
-@media ( min-width: 992px ) {.col-md-2 { width: inherit; }}
 @media ( max-width: 992px ) {
   .col-md-2 {
     text-align: center;

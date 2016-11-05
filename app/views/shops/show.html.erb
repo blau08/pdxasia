@@ -40,9 +40,9 @@
       <br>
       <%= @shop.bio %>
       <br>
-      <%= link_to @shop.yelp %>
+      <%= link_to @shop.yelp, @shop.yelp %>
       <br>
-      <%= link_to "Edit", edit_food_path(@shop) %>
+      <%= link_to "Edit", edit_shop_path(@shop) %>
       <br>
       <!-- <p>
         <%= link_to "Delete", food_path(@shop), method: :delete, data: { confirm: "Are you sure you want to delete?"} %>

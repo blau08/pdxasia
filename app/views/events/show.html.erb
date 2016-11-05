@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="col-md-4">
+    <div class="well">
+      <h4>Contact</h4>
+      <%= @event.name %>
+      <br>
+      <%= @event.location %>
+      <br>
+      <%= link_to "Edit", edit_event_path(@event) %>
+      <br>
+      <!-- <p>
+        <%= link_to "Delete", food_path(@event), method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
+      </p> -->
+    </div>
+  </div>
+</div>

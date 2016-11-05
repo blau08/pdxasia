@@ -4,3 +4,82 @@
 <div id="events">
 
 </div>
+<div class="container ">
+  <div class="row">
+    <h1 class="upcoming-events">Upcoming <span class="font-blue">Events</span></h1>
+    <div class="event-header">
+      <button class="post-event-button" type="button" name="button">Post An Event</button>
+      <p class="display-inline font-italic">
+        Where to go out, dance, and revel. Hand-picked events in Portland, curated by a team with combined decades in town.
+      </p>
+    </div>
+  </div>
+  <div class="row event-bar">
+    <div class="col-md-12">
+
+      <a href="/events">
+        <div class="col-md-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            ALL EVENTS
+          </p>
+        </div>
+      </a>
+      <a href="/foods">
+        <div class="col-md-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            SPORTS
+          </p>
+        </div>
+      </a>
+      <a href="/foods">
+        <div class="col-md-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            DINING
+          </p>
+        </div>
+      </a>
+      <a href="/foods">
+        <div class="col-md-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            COMMUNITY
+          </p>
+        </div>
+      </a>
+      <a href="/foods">
+        <div class="col-md-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            ARTS
+          </p>
+        </div>
+      </a>
+      <a href="/foods">
+        <div class="col-md-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            NIGHTLIFE
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <p class="display-inline">
+      Date
+    </p>
+    <input class="display-inline" type="text_field" name="name" value="" placeholder="DATE">
+  </div>
+  <div class="row">
+    <div class="well col-md-6">
+      <% @event.each do |event| %>
+        <%= event.name %>
+        <br>
+        <%= event.location %>
+      <% end %>
+    </div>
+  </div>
+</div>

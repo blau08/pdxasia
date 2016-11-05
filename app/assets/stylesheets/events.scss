@@ -11,3 +11,13 @@
   min-height: 877px;
   background-size: 100%;
 }
+.post-event-button { display: inline; float: right; }
+.font-italic { font-style: italic; }
+.font-bold { font-weight: bold; }
+.font-blue { color: #01b0f3; }
+.upcoming-events { font-weight: bold; font-size: 3.5em; letter-spacing: -2px; }
+.event-bar { background: black; height: 70px; overflow: hidden; }
+.event-box { display: inline; float: left; padding: 10px; text-align: center; border-right: 1px solid gray; }
+.date-box { padding: 5px 0; display: inline; }
+.font-30 { font-size: 30px; }
+.display-inline { display: inline; margin: 10px 0; }

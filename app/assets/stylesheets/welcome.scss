@@ -22,3 +22,24 @@
 span.glyphicon-search { color: white; }
 .logo { height: 100px; width: 100px; }
 // .search-bar { height: 10em; overflow: hidden; }
+.food-box { margin-right: 10px; background: $green; text-align: center; height: 154px; a { color: white; font-size: 50px; } }
+
+.wrapper {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.scroll-wrapper {
+  width: 3000px;
+}
+
+.welcome-item-height {
+  color: white;
+  float: left;
+  overflow: hidden;
+  width: 165px;
+}
+
+// .welcome-item-height:last-of-type {
+//   margin-right: 0;
+// }

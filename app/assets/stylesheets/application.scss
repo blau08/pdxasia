@@ -88,7 +88,7 @@ body { padding-top: 70px; background-color: aliceblue;}
 .font-25 { font-size: 25px; }
 .col-width-15 {
   float: left;
-  width: 15%;
+  width: 11%;
 }
 @media (max-width: 992px) {
   .fa-nav-top {
@@ -105,7 +105,7 @@ body { padding-top: 70px; background-color: aliceblue;}
     font-size: 50px;
   }
   .col-width-15 {
-    width: 25%;
+    width: 22%;
   }
 }
 
@@ -236,7 +236,8 @@ body { padding-top: 70px; background-color: aliceblue;}
 .welcome-item-height h4 {
   height: 20px;
   overflow: hidden;
-  text-align: center; 
+  text-align: center;
+  margin-right: 10px;
 }
 .card-width-11 {
   width: 11em;

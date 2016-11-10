@@ -408,7 +408,7 @@ end
 
 event_list = [
   ["EAF and LED Combined Fellowship",
-  "David's House"
+  "David's House",
   "Date.parse('11-11-2016')",
   "There will be a get together for EAF and LED fellowships. It will be at David's house and it will be from 5:30pm - 9:30pm. Bring a dish and eat. Have fun.",
   File.open(File.join(Rails.root,'public/assets/profile.jpg'))

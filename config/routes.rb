@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :communities
   resources :events
   resources :pictures
+  resources :videos
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

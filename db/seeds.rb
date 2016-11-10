@@ -412,7 +412,31 @@ event_list = [
   "Date.parse('11-11-2016')",
   "There will be a get together for EAF and LED fellowships. It will be at David's house and it will be from 5:30pm - 9:30pm. Bring a dish and eat. Have fun.",
   File.open(File.join(Rails.root,'public/assets/profile.jpg'))
-  ]
+],
+  ["Janice's Birthday",
+  "Growing Hall - PCCMA",
+  "Date.parse('18-11-2016')",
+  "Come join us celebrate Janice's 18th birthday. There will be lots of fun, hugs, and kisses. Come take pictures, hit pinatas, and wish Janice a happy birthday.",
+  File.open(File.join(Rails.root,'public/assets/events/janice.jpg'))
+],
+  ["Thanksgiving Event",
+  "PCCMA",
+  "Date.parse('19-11-2016')",
+  "Come join us for a church-wide potluck with a performance and special guest. There will be 3 congregations, English, Chinese, and Mandarin. It's a potluck so there will be lots of food and singing and videos.",
+  File.open(File.join(Rails.root,'public/assets/prime_rib.JPG'))
+],
+  ["H2O Combined Service",
+  "Sanctuary - PCCMA",
+  "Date.parse('20-11-2016')",
+  "H2O leads worship on combined service. This will be the service before Thanksgiving. Come one come all. Starts at 11am.",
+  File.open(File.join(Rails.root,'public/assets/events/events.jpg'))
+],
+  ["H2O Christmas Party",
+  "Growing Hall - PCCMA",
+  "Date.parse('23-12-2016')",
+  "Annual White Elephant Christmas Party. Lots of fun, lots of pictures, lots of laughter.",
+  File.open(File.join(Rails.root,'public/assets/christmas.JPG'))
+]
 ]
 event_list.each do |name, location, date, description, image|
   if Event.where(name: name).blank?

@@ -8,20 +8,15 @@
     <div class="scroll-wrapper">
 
       <div class="welcome-item-height food-box">
-        <a href="/foods"><i class="fa fa-cutlery" aria-hidden="true"></i>
-          <br>
-          Food
-          </a>
+        <a href="/foods"><i class="fa fa-cutlery" aria-hidden="true"></i></a>
+        <br>Food
       </div>
       <% @foods.each_with_index do |food, index| %>
         <% if index < 4 %>
           <div class="welcome-item-height">
-            <a href="#">
-              <img class="img-responsive">
-              <%= link_to food_path(food) do %>
-              <%= image_tag(food.image.url(:small), class: "card-width-11") %>
-              <% end %>
-            </a>
+            <%= link_to food_path(food) do %>
+            <%= image_tag(food.image.url(:small), class: "card-width-11") %>
+            <% end %>
             <h4>
               <a>
                 <%= link_to food.name, food_path(food) %>
@@ -30,12 +25,9 @@
           </div>
         <% elsif index.between?(4,7) %>
           <div class="welcome-item-height">
-            <a href="#">
-              <img class="img-responsive">
-              <%= link_to food_path(food) do %>
-              <%= image_tag(food.image.url(:small), class: "card-width-11") %>
-              <% end %>
-            </a>
+            <%= link_to food_path(food) do %>
+            <%= image_tag(food.image.url(:small), class: "card-width-11") %>
+            <% end %>
             <h4>
               <a>
                 <%= link_to food.name, food_path(food) %>
@@ -44,12 +36,9 @@
           </div>
         <% elsif index > 7 %>
           <div class="welcome-item-height">
-            <a href="#">
-              <img class="img-responsive">
-              <%= link_to food_path(food) do %>
-              <%= image_tag(food.image.url(:small), class: "card-width-11") %>
-              <% end %>
-            </a>
+            <%= link_to food_path(food) do %>
+            <%= image_tag(food.image.url(:small), class: "card-width-11") %>
+            <% end %>
             <h4>
               <a>
                 <%= link_to food.name, food_path(food) %>
@@ -66,22 +55,17 @@
 <div class="container-fluid">
   <div class="wrapper">
     <div class="scroll-wrapper">
-
       <div class="welcome-item-height food-box">
-        <a href="/foods"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-          <br>
-          Shop
-          </a>
+        <a href="/foods"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+        <br>
+        Shop
       </div>
       <% @shops.each_with_index do |shop, index| %>
         <% if index < 4 %>
           <div class="welcome-item-height">
-            <a href="#">
-              <img class="img-responsive">
-              <%= link_to shop_path(shop) do %>
-              <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
-              <% end %>
-            </a>
+            <%= link_to shop_path(shop) do %>
+            <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
+            <% end %>
             <h4>
               <a>
                 <%= link_to shop.name, shop_path(shop) %>
@@ -90,12 +74,9 @@
           </div>
         <% elsif index.between?(4,7) %>
           <div class="welcome-item-height">
-            <a href="#">
-              <img class="img-responsive">
-              <%= link_to shop_path(shop) do %>
-              <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
-              <% end %>
-            </a>
+            <%= link_to shop_path(shop) do %>
+            <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
+            <% end %>
             <h4>
               <a>
                 <%= link_to shop.name, shop_path(shop) %>
@@ -104,12 +85,9 @@
           </div>
         <% elsif index > 7 %>
           <div class="welcome-item-height">
-            <a href="#">
-              <img class="img-responsive">
-              <%= link_to shop_path(shop) do %>
-              <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
-              <% end %>
-            </a>
+            <%= link_to shop_path(shop) do %>
+            <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
+            <% end %>
             <h4>
               <a>
                 <%= link_to shop.name, shop_path(shop) %>
@@ -125,22 +103,17 @@
 <div class="container-fluid">
   <div class="wrapper">
     <div class="scroll-wrapper">
-
       <div class="welcome-item-height food-box">
-        <a href="/foods"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-          <br>
-          Comm
-          </a>
+        <a href="/foods"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></a>
+        <br>
+        Community
       </div>
       <% @communities.each_with_index do |community, index| %>
         <% if index < 4 %>
           <div class="welcome-item-height">
-            <a href="#">
-              <img class="img-responsive">
-              <%= link_to community_path(community) do %>
-              <%= image_tag(community.image.url(:small), class: "card-width-11") %>
-              <% end %>
-            </a>
+            <%= link_to community_path(community) do %>
+            <%= image_tag(community.image.url(:small), class: "card-width-11") %>
+            <% end %>
             <h4>
               <a>
                 <%= link_to community.name, community_path(community) %>
@@ -149,12 +122,9 @@
           </div>
         <% elsif index.between?(4,7) %>
           <div class="welcome-item-height">
-            <a href="#">
-              <img class="img-responsive">
-              <%= link_to community_path(community) do %>
-              <%= image_tag(community.image.url(:small), class: "card-width-11") %>
-              <% end %>
-            </a>
+            <%= link_to community_path(community) do %>
+            <%= image_tag(community.image.url(:small), class: "card-width-11") %>
+            <% end %>
             <h4>
               <a>
                 <%= link_to community.name, community_path(community) %>
@@ -163,12 +133,9 @@
           </div>
         <% elsif index > 7 %>
           <div class="welcome-item-height">
-            <a href="#">
-              <img class="img-responsive">
-              <%= link_to community_path(community) do %>
-              <%= image_tag(community.image.url(:small), class: "card-width-11") %>
-              <% end %>
-            </a>
+            <%= link_to community_path(community) do %>
+            <%= image_tag(community.image.url(:small), class: "card-width-11") %>
+            <% end %>
             <h4>
               <a>
                 <%= link_to community.name, community_path(community) %>

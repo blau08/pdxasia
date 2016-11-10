@@ -405,3 +405,17 @@ community_list.each do |name, address, number, bio, image, b, c, d|
     community.pictures.create(image: d) if d.present?
   end
 end
+
+event_list = [
+  ["EAF and LED Combined Fellowship",
+  "David's House"
+  "Date.parse('11-11-2016')",
+  "There will be a get together for EAF and LED fellowships. It will be at David's house and it will be from 5:30pm - 9:30pm. Bring a dish and eat. Have fun.",
+  File.open(File.join(Rails.root,'public/assets/profile.jpg'))
+  ]
+]
+event_list.each do |name, location, date, description, image|
+  if Event.where(name: name).blank?
+    event = Event.create( name: name, location: location, date: date, description: description, image: image)
+  end
+end

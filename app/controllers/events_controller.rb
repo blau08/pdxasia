@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
   def index
-    @event = Event.all
+    @event = Event.all.order(:date)
   end
 
   def create
@@ -32,7 +32,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:name, :location)
+    params.require(:event).permit(:name, :location, :date, :description, :image, :categories_attributes => [:id, :name])
   end
 
 end

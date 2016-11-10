@@ -92,8 +92,9 @@ body { padding-top: 70px; background-color: aliceblue;}
 }
 @media (max-width: 992px) {
   .fa-nav-top {
-    margin-top: 5px;
     margin-bottom: -31px;
+    margin-top: -49px;
+    margin-left: 200px;
   }
   .fa-nav-bot {
     margin-top: 20px;
@@ -106,6 +107,9 @@ body { padding-top: 70px; background-color: aliceblue;}
   }
   .col-width-15 {
     width: 22%;
+  }
+  .navbar-header {
+      float: none;
   }
 }
 

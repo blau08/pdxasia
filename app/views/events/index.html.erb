@@ -8,7 +8,7 @@
   <div class="row">
     <h1 class="upcoming-events">Upcoming <span class="font-blue">Events</span></h1>
     <div class="event-header">
-      <button class="post-event-button" type="button" name="button">Post An Event</button>
+      <%= button_to "Post An Event", new_event_path, :class => "post-event-button", :method => :get %>
       <p class="display-inline font-italic">
         Where to go out, dance, and revel. Hand-picked events in Portland, curated by a team with combined decades in town.
       </p>
@@ -74,12 +74,41 @@
     <input class="display-inline" type="text_field" name="name" value="" placeholder="DATE">
   </div>
   <div class="row">
-    <div class="well col-md-6">
+    <div class="col-md-8">
       <% @event.each do |event| %>
-        <%= event.name %>
-        <br>
-        <%= event.location %>
+        <div class="well">
+          <div class="row">
+            <div class="col-md-2 col-xs-2">
+              <div class="">
+                <%= event.date.strftime("%B") %>
+                <span class="date-font">
+                  <%= event.date.strftime("%e") %>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-2 col-xs-2">
+              <div class="event-image">
+                <%= link_to event_path(event) do %>
+                  <%= image_tag(event.image.url(:thumb)) %>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-8 col-xs-8">
+              <p class="event-title">
+                <%= link_to event.name, event_path(event) %>
+              </p>
+              <%= event.location %>
+              <br>
+              <%= event.description %>
+            </div>
+          </div>
+        </div>
       <% end %>
+    </div>
+    <div class="col-md-4">
+      <div class="well">
+        Stuff
+      </div>
     </div>
   </div>
 </div>

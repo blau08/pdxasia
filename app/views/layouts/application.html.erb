@@ -8,9 +8,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
+  <!-- <nav class="navbar navbar-default">
+    <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
@@ -21,39 +20,85 @@
         <a class="navbar-brand" href="/"><img class="pdxasialogo img-responsive" src="/assets/pdxasialogo1.png" alt="" /></a>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse col-md-9 left-border-white" id="bs-example-navbar-collapse-1">
         <div class="row">
-
           <ul class="nav navbar-nav fa-nav-top">
             <li class="social-links"><a href="/"><i class="fa fa-home font-25" aria-hidden="true"></i></a></li>
             <li class="social-links"><a href="https://www.facebook.com/pdxasia/"><i class="fa fa-facebook-square font-25" aria-hidden="true"></i></a></li>
             <li class="social-links"><a href="https://www.instagram.com/pdxasia/"><i class="fa fa-instagram font-25" aria-hidden="true"></i></a></li>
             <li class="social-links"><a href="https://twitter.com/portlandasia"><i class="fa fa-twitter font-25" aria-hidden="true"></i></a></li>
-            <!-- <li>
-              <form class="navbar-form">
-                <div class="input-group">
-                  <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                  <input type="text" class="form-control" placeholder="Search Shops, Food, Events...">
-                </div>
-              </form>
-            </li> -->
           </ul>
+        </div>
+        <div class="row">
+          <ul class="nav navbar-nav fa-nav-bot">
+            <li><a href="/foods"><i class="fa fa-cutlery" aria-hidden="true"></i> Food<span class="sr-only">(current)</span></a></li>
+            <li><a href="/events"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
+            <li><a href="/shops"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shops</a></li>
+            <li><a href="/communities"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Community</a></li>
+            <li><a href="/pictures"><i class="fa fa-camera" aria-hidden="true"></i> Pictures</a></li>
+            <li><a href="/videos"><i class="fa fa-video-camera" aria-hidden="true"></i> Videos</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="row">
-        <ul class="nav navbar-nav fa-nav-bot">
-          <li><a href="/foods"><i class="fa fa-cutlery" aria-hidden="true"></i> Food<span class="sr-only">(current)</span></a></li>
-          <li><a href="/events"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
-          <li><a href="/shops"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shops</a></li>
-          <li><a href="/communities"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Community</a></li>
-          <li><a href="/pictures"><i class="fa fa-camera" aria-hidden="true"></i> Pictures</a></li>
-          <li><a href="/videos"><i class="fa fa-video-camera" aria-hidden="true"></i> Videos</a></li>
-        </ul>
+    </div>
+  </nav> -->
 
-      </div>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img class="pdxasialogo img-responsive" src="/assets/pdxasialogo1.png" alt="" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/foods"><i class="fa fa-cutlery" aria-hidden="true"></i> Food<span class="sr-only">(current)</span></a></li>
+        <li><a href="/events"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
+        <li><a href="/shops"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shops</a></li>
+        <li><a href="/communities"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Community</a></li>
+        <li><a href="/pictures"><i class="fa fa-camera" aria-hidden="true"></i> Pictures</a></li>
+        <li><a href="/videos"><i class="fa fa-video-camera" aria-hidden="true"></i> Videos</a></li>
+
+        <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="social-links"><a href="/"><i class="fa fa-home font-25" aria-hidden="true"></i></a></li>
+            <li class="social-links"><a href="https://www.facebook.com/pdxasia/"><i class="fa fa-facebook-square font-25" aria-hidden="true"></i></a></li>
+            <li class="social-links"><a href="https://www.instagram.com/pdxasia/"><i class="fa fa-instagram font-25" aria-hidden="true"></i></a></li>
+            <li class="social-links"><a href="https://twitter.com/portlandasia"><i class="fa fa-twitter font-25" aria-hidden="true"></i></a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul> -->
+        </li>
+        <li class="social-links"><a href="/"><i class="fa fa-home font-25" aria-hidden="true"></i></a></li>
+        <li class="social-links"><a href="https://www.facebook.com/pdxasia/"><i class="fa fa-facebook-square font-25" aria-hidden="true"></i></a></li>
+        <li class="social-links"><a href="https://www.instagram.com/pdxasia/"><i class="fa fa-instagram font-25" aria-hidden="true"></i></a></li>
+        <li class="social-links"><a href="https://twitter.com/portlandasia"><i class="fa fa-twitter font-25" aria-hidden="true"></i></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 <%= yield %>
 

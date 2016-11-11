@@ -1,0 +1,26 @@
+<%= render "layouts/errors", :object => @service %>
+
+<%= form_for @service, html: { multipart: true } do |f| %>
+  <%= f.label :first %>:
+  <br>
+  <%= f.text_field :first %><br />
+
+  <%= f.label :last %>:
+  <br>
+  <%= f.text_field :last %><br />
+
+  <%= f.label :number %>:
+  <br>
+  <%= f.text_field :number %><br />
+  <br>
+  <%= f.label :industry %>
+  <br>
+  <%= f.text_field :industry %>
+  <br>
+  <%= f.label :language %>
+  <br>
+  <%= f.text_field :language %>
+  <br>
+
+  <%= f.submit %>
+<% end %>

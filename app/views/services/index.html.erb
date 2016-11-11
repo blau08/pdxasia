@@ -1,0 +1,40 @@
+<div class="container">
+  <table class="table table-hover table-responsive">
+    <tr>
+      <th>
+        #
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Number
+      </th>
+      <th>
+        Language
+      </th>
+      <th>
+        Industry
+      </th>
+    </tr>
+    <% @services.each_with_index do |service, index| %>
+      <tr>
+        <td>
+          <%= index + 1 %>
+        </td>
+        <td>
+          <%= link_to service.first + " " + service.last, service_path(service) %>
+        </td>
+        <td>
+          <%= service.number %>
+        </td>
+        <td>
+          <%= service.language %>
+        </td>
+        <td>
+          <%= service.industry %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

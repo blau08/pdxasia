@@ -33,13 +33,15 @@
 <div class="container">
   <div class="col-md-4">
     <div class="well">
-      <h4>Contact</h4>
-      <%= @shop.name %>
-      <br>
-      <%= @shop.address %>
-      <br>
-      <%= @shop.bio %>
-      <br>
+      <p class="shop-title">
+        <%= @shop.name %>
+      </p>
+      <p class="shop-address">
+        <%= @shop.address %>
+      </p>
+      <p>
+        <%= @shop.bio %>
+      </p>
       <%= link_to @shop.yelp, @shop.yelp %>
       <br>
       <%= link_to "Edit", edit_shop_path(@shop) %>

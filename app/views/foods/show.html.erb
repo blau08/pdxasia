@@ -33,14 +33,17 @@
 <div class="container">
   <div class="col-md-4">
     <div class="well">
-      <h4>Contact</h4>
-      <%= @food.name %>
-      <br>
-      <%= @food.address %>
-      <br>
-      <%= @food.bio %>
-      <br>
+      <p class="restaurant-title">
+        <%= @food.name %>
+      </p>
+      <p class="restaurant-address">
+        <%= @food.address %>
+      </p>
+      <p>
+        <%= @food.bio %>
+      </p>
       <%= link_to @food.yelp, @food.yelp %>
+      <br>
       <br>
       <%= link_to "Edit", edit_food_path(@food) %>
       <br>

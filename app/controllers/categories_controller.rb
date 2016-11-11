@@ -9,6 +9,14 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
 
+  def update
+
+  end
+
+  def edit
+
+  end
+  
   private
   def category_params
     params.require(:category).permit(:name)

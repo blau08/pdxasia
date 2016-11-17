@@ -11,6 +11,7 @@ gem "breadcrumbs_on_rails"
 gem 'owlcarousel-rails'
 gem 'pry-rails'
 gem 'font-awesome-sass'
+gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

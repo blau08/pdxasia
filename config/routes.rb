@@ -1,20 +1,25 @@
 Rails.application.routes.draw do
+  scope "(/:locale)", locale: /en|zh-CN/ do
 
-  get 'welcome/index'
+    get 'welcome/index'
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+    # The priority is based upon order of creation: first created -> highest priority.
+    # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'welcome#index'
+    # You can have the root of your site routed with "root"
 
-  resources :foods
-  resources :shops
-  resources :communities
-  resources :events
-  resources :pictures
-  resources :videos
-  resources :services
+    resources :foods
+    resources :shops
+    resources :communities
+    resources :events
+    resources :pictures
+    resources :videos
+    resources :services
+
+    root 'welcome#index'
+  end
+  get '/*path', to: redirect("/#{I18n.default_locale}/%{path}")
+  get '', to: redirect("/#{I18n.default_locale}/")
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

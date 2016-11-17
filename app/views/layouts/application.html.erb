@@ -59,13 +59,41 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/foods"><i class="fa fa-cutlery" aria-hidden="true"></i> Food<span class="sr-only">(current)</span></a></li>
-        <li><a href="/events"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
-        <li><a href="/shops"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shops</a></li>
-        <li><a href="/communities"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Community</a></li>
-        <li><a href="/pictures"><i class="fa fa-camera" aria-hidden="true"></i> Pictures</a></li>
-        <li><a href="/videos"><i class="fa fa-video-camera" aria-hidden="true"></i> Videos</a></li>
-        <li><a href="/services"><i class="fa fa-video-camera" aria-hidden="true"></i> Services</a></li>
+        <li>
+        <%= link_to foods_path do %>
+          <i class="fa fa-cutlery" aria-hidden="true"></i> <%= t('layouts.application.food') %>
+          <% end %>
+        </li>
+        <li>
+          <%=link_to events_path do %>
+          <i class="fa fa-calendar" aria-hidden="true"></i> <%= t('layouts.application.event') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to shops_path do %>
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i> <%= t('layouts.application.shop') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to communities_path do %>
+          <i class="fa fa-lightbulb-o" aria-hidden="true"></i> <%= t('layouts.application.community') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to pictures_path do %>
+          <i class="fa fa-camera" aria-hidden="true"></i> <%= t('layouts.application.picture') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to videos_path do %>
+          <i class="fa fa-video-camera" aria-hidden="true"></i> <%= t('layouts.application.video') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to services_path do %>
+          <i class="fa fa-video-camera" aria-hidden="true"></i> <%= t('layouts.application.service') %>
+          <% end %>
+        </li>
 
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -91,6 +119,12 @@
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
           </ul> -->
+        </li>
+        <li>
+          <%= link_to "EN", locale: "en" %>
+        </li>
+        <li>
+          <%= link_to "中文", locale: "zh-CN" %>
         </li>
         <li class="social-links"><a href="/"><i class="fa fa-home font-25" aria-hidden="true"></i></a></li>
         <li class="social-links"><a href="https://www.facebook.com/pdxasia/"><i class="fa fa-facebook-square font-25" aria-hidden="true"></i></a></li>

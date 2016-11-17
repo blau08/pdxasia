@@ -20,4 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      food: "Foods"
+      event: "Events"
+      shop: "Shops"
+      community: "Community"
+      picture: "Pictures"
+      video: "Videos"
+      service: "Services"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111230634) do
+ActiveRecord::Schema.define(version: 20161119005148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,8 +56,19 @@ ActiveRecord::Schema.define(version: 20161111230634) do
     t.datetime "image_updated_at"
   end
 
-  create_table "foods", force: :cascade do |t|
+  create_table "food_translations", force: :cascade do |t|
+    t.integer  "food_id",    null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "name"
+    t.string   "bio"
+  end
+
+  add_index "food_translations", ["food_id"], name: "index_food_translations_on_food_id", using: :btree
+  add_index "food_translations", ["locale"], name: "index_food_translations_on_locale", using: :btree
+
+  create_table "foods", force: :cascade do |t|
     t.string   "address"
     t.string   "phone"
     t.datetime "created_at",         null: false
@@ -67,7 +78,6 @@ ActiveRecord::Schema.define(version: 20161111230634) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "yelp"
-    t.string   "bio"
     t.string   "youtube"
   end
 

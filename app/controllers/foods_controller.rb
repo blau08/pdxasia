@@ -4,7 +4,7 @@ class FoodsController < ApplicationController
   add_breadcrumb "Foods", :foods_path
 
   def index
-    @foods = Food.all.order(:name)
+    @foods = Food.all
 
     add_breadcrumb "index", foods_path
   end

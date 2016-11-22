@@ -4,7 +4,8 @@ class FoodsController < ApplicationController
   add_breadcrumb "Foods", :foods_path
 
   def index
-    @foods = Food.all
+    # @foods = Food.all.order(:name)
+    @foods = Food.joins('INNER JOIN food_translations ON foods.id=food_translations.food_id').order('food_translations.name').where('food_translations.locale=?', params[:locale])
 
     add_breadcrumb "index", foods_path
   end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  scope "(/:locale)", locale: /en|zh/ do
+  scope "(/:locale)", locale: /en|zh/, defaults: { locale: "en" } do
 
     get 'welcome/index'
 
@@ -15,11 +15,10 @@ Rails.application.routes.draw do
     resources :pictures
     resources :videos
     resources :services
-
     root 'welcome#index'
   end
   get '/*path', to: redirect("/#{I18n.default_locale}/%{path}")
-  get '', to: redirect("/#{I18n.default_locale}/")
+  get '/', to: redirect("/#{I18n.default_locale}/")
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

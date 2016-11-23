@@ -1,6 +1,7 @@
 /*
 *= require owl.carousel
 *= require owl.theme
+*= require social-share-button
 */
 
 @import "bootstrap-sprockets";
@@ -278,6 +279,14 @@ a.navbar-logo:hover { text-decoration: none; color: $white; }
 .pink-logo { color: #D369C7; }
 .orange-logo { color: orange; }
 .yellow-logo { color: yellow; }
+
+.social-share-button {
+  .ssb-icon {
+    background-size: 24px;
+    height: 24px;
+    width: 24px;
+  }
+}
 
 
 @import "events";

@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require social-share-button
+//= require social-share-button/wechat
 //= require bootstrap-sprockets
 //= require owl.carousel
+//= require_tree .

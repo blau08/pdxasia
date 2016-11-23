@@ -10,7 +10,12 @@ class WelcomeController < ApplicationController
   end
 
   # def set_locale
-  #   I18n.locale = params[:locale] || I18n.default_locale
+  #   if params[:locale] == nil
+  #     params[:locale] = I18n.locale
+  #     I18n.locale = :en
+  #   else
+  #     I18n.locale = :zh
+  #   end
   # end
 
 end

@@ -22,10 +22,10 @@
 en:
   layouts:
     application:
-      food: "Foods"
-      event: "Events"
-      shop: "Shops"
+      food: "Food"
+      event: "Event"
+      shop: "Shop"
       community: "Community"
-      picture: "Pictures"
-      video: "Videos"
-      service: "Services"
+      picture: "Picture"
+      video: "Video"
+      service: "Service"

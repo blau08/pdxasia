@@ -179,27 +179,8 @@ body { padding-top: 50px; background-color: aliceblue;}
     }
   }
 }
-@media (max-width: 774px) {
-  .navbar-default {
-    .container-fluid {
-      .navbar-header {
-        .navbar-brand {
-        }
-      }
-      .navbar-collapse {
-        .navbar-nav {
-          li {
-            a {
-              font-size: 12px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
-@media (max-width: 767px) {
+@media (max-width: 899px) {
   .navbar-default {
     .container-fluid {
       .navbar-header {

@@ -52,7 +52,8 @@ Our growing menu consists of a variety of Chinese cuisine unique to Portland. Cu
   File.open(File.join(Rails.root,'public/assets/foods/havl1.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/havl2.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/havl3.jpg')),
-  File.open(File.join(Rails.root,'public/assets/foods/havl4.jpg'))
+  File.open(File.join(Rails.root,'public/assets/foods/havl4.jpg')),
+  "https://www.youtube.com/embed/LLKDyGXkmfo"
   ],
 
   ["Hot Pot City",
@@ -63,7 +64,8 @@ Our growing menu consists of a variety of Chinese cuisine unique to Portland. Cu
   File.open(File.join(Rails.root,'public/assets/foods/hpc1.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/hpc2.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/hpc3.jpg')),
-  File.open(File.join(Rails.root,'public/assets/foods/hpc4.jpg'))
+  File.open(File.join(Rails.root,'public/assets/foods/hpc4.jpg')),
+  "https://www.youtube.com/embed/7Dp75GmyO6M"
   ],
 
   ["Ocean City",
@@ -74,7 +76,8 @@ Our growing menu consists of a variety of Chinese cuisine unique to Portland. Cu
   File.open(File.join(Rails.root,'public/assets/foods/oc1.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/oc2.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/oc3.jpg')),
-  File.open(File.join(Rails.root,'public/assets/foods/oc4.jpg'))
+  File.open(File.join(Rails.root,'public/assets/foods/oc4.jpg')),
+  "https://www.youtube.com/embed/wSisPR5wm8U"
   ],
 
   ["Lee's Sandwiches",
@@ -88,6 +91,18 @@ Our growing menu consists of a variety of Chinese cuisine unique to Portland. Cu
   File.open(File.join(Rails.root,'public/assets/foods/ls4.jpg'))
   ],
 
+  ["Pho Kim",
+  "2204 SE 82nd Ave, Portland, OR 97216",
+  "(503) 954-2535",
+  "https://www.yelp.com/biz/pho-kim-portland",
+  "Do you know, Pho? Then you already know Pho Kim. If not then let me introduce you to the best Vietnamese Beef Noodle Soup this side of Hanoi. Pho Kim is situated in an older mid-century(?) classic restaurant building on where else? 82nd Ave near Division. It is a no bull, getter done noodle 'n soup house smack dab in the middle of the East Side. They have THE Best Beef Noodle Soup in Portland, hands down. They also have some of the best beef stew with Bahn I've ever tasted. Their Bun is not too shabby either. Hell, their entire menu is quite fantastic, I must say. However the bubble teas and shakes are not the best I've had. Guo Cuon? Also, fantastic. Service is fast & friendly and their prices are not to be beat. Not much more to say except that the building they're in is really classy and clean, I love the huge windows looking out on to 82nd Ave. The big red five stars are for their serious Pho flavor, and the trifecta -quality, service, and price. Come here and slurp the bowl clean, you won't be disappointed. Enjoy!!",
+  File.open(File.join(Rails.root,'public/assets/foods/pk1.png')),
+  File.open(File.join(Rails.root,'public/assets/foods/pk2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/pk3.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/pk3.jpg')),
+  "https://www.youtube.com/embed/BTD_Ix1dpLU"
+  ],
+
   ["Pho Vietnam",
   "5440 SE 82nd Ave, Portland, OR 97266",
   "(503) 772-2148",
@@ -96,7 +111,8 @@ Our growing menu consists of a variety of Chinese cuisine unique to Portland. Cu
   File.open(File.join(Rails.root,'public/assets/foods/pv1.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/pv2.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/pv3.jpg')),
-  File.open(File.join(Rails.root,'public/assets/foods/pv4.jpg'))
+  File.open(File.join(Rails.root,'public/assets/foods/pv4.jpg')),
+  "https://www.youtube.com/embed/fDjpeAlT1Ro"
   ],
 
   ["Thai Fresh",
@@ -162,7 +178,8 @@ Our growing menu consists of a variety of Chinese cuisine unique to Portland. Cu
   File.open(File.join(Rails.root,'public/assets/foods/minato1.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/minato2.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/minato3.jpg')),
-  File.open(File.join(Rails.root,'public/assets/foods/minato4.jpg'))
+  File.open(File.join(Rails.root,'public/assets/foods/minato4.jpg')),
+  "https://www.youtube.com/embed/hgZpGbOjaJE"
   ],
 
   ["Good Taste Noodle House",
@@ -197,14 +214,40 @@ Our growing menu consists of a variety of Chinese cuisine unique to Portland. Cu
   File.open(File.join(Rails.root,'public/assets/foods/gg3.jpg')),
   File.open(File.join(Rails.root,'public/assets/foods/gg4.jpg'))
   ],
+
+  ["Rose VL",
+  "6424 SE Powell Blvd, Portland, OR 97206",
+  "(503) 206-4344",
+  "https://www.yelp.com/biz/rose-vl-deli-portland-2",
+  "Vietnamese fare including banh mi & jumbo soups served in a bright & colorful space.",
+  File.open(File.join(Rails.root,'public/assets/foods/rvl1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/rvl2.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/rvl1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/rvl2.jpg')),
+  "https://www.youtube.com/embed/gHS7zNLpZTw"
+  ],
+
+  ["Mojo Crepes",
+  "8409 SE Division St, Portland, OR 97266",
+  "(503) 206-4344",
+  "https://www.yelp.com/biz/mojo-crepes-portland ",
+  "Quirky Japanese cafe serving ice cream-filled crêpes, bubble tea & hot dogs topped with seaweed.",
+  File.open(File.join(Rails.root,'public/assets/foods/mc1.jpg')),
+  File.open(File.join(Rails.root,'public/assets/foods/mc2.JPG')),
+  File.open(File.join(Rails.root,'public/assets/foods/mc3.JPG')),
+  File.open(File.join(Rails.root,'public/assets/foods/mc3.JPG')),
+  "https://www.youtube.com/embed/87nd5U1x5WY"
+  ]
 ]
 
-food_list.each do |name, address, phone, yelp, bio, image, b, c, d|
+food_list.each do |name, address, phone, yelp, bio, image, b, c, d, youtube|
   if Food.where(name: name).blank?
     food = Food.create( name: name, address: address, phone: phone, yelp: yelp, bio: bio, image: image)
     food.pictures.create(image: b) if b.present?
     food.pictures.create(image: c) if c.present?
     food.pictures.create(image: d) if d.present?
+    food.youtube = youtube if youtube.present?
+    food.save
   end
 end
 

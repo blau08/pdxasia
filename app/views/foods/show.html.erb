@@ -61,21 +61,24 @@
       <% end %>
     </div>
   </div>
-  <div class="col-md-8">
-    <div class="well">
-      <div class="video-container">
-        <iframe width="560" height="315" src="<%= @food.youtube %>" frameborder="0" allowfullscreen></iframe>
+
+  <% if @food.youtube.present? %>
+    <div class="col-md-8">
+      <div class="well">
+        <div class="video-container">
+          <iframe width="560" height="315" src="<%= @food.youtube %>" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="well">
+        <h4>About</h4>
+        <%= @food.bio %>
+      </div>
+      <div class="well">
+        <h4>Tags</h4>
+        <%= @food.categories.map(&:name).join(' | ') %>
       </div>
     </div>
-    <div class="well">
-      <h4>About</h4>
-      <%= @food.bio %>
-    </div>
-    <div class="well">
-      <h4>Tags</h4>
-      <%= @food.categories.map(&:name).join(' | ') %>
-    </div>
-  </div>
+  <% end %>
 </div>
 
 <script type="text/javascript">

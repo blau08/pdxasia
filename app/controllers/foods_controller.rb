@@ -36,7 +36,6 @@ class FoodsController < ApplicationController
   def edit
     @food = Food.find(params[:id])
     5.times { @food.pictures.build }
-    3.times { @food.categories.build }
   end
 
   def show
@@ -63,6 +62,6 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:food).permit(:name, :address, :phone, :image, :yelp, :bio, :category, :youtube, :pictures_attributes => [:image], :categories_attributes => [:id, :name])
+    params.require(:food).permit(:name, :address, :phone, :image, :yelp, :bio, :category, :youtube, :pictures_attributes => [:image])
   end
 end

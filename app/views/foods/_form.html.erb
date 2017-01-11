@@ -30,12 +30,7 @@
     <%= picture_fields.file_field :image %>
   </p>
   <% end %>
-  <%= f.label :categories %>: Category
-  <%= f.fields_for :categories do |category_fields| %>
-  <p>
-    <%= category_fields.text_field :name %>
-  </p>
-  <% end %>
+
 
   <%= f.submit %>
 <% end %>

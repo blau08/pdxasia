@@ -7,163 +7,133 @@
   <%= social_share_button_tag("Portland Asia - Events, news, all things Asian in Portland", :url => "http://www.portlandasia.com") %>
 </div>
 <br>
-<div class="container-fluid">
-  <div class="wrapper">
-    <div class="scroll-wrapper">
 
-      <div class="welcome-item-height food-box">
-        <a href="/foods"><i class="fa fa-cutlery" aria-hidden="true"></i></a>
-        <br>Food
-      </div>
-      <% @foods.each_with_index do |food, index| %>
-        <% if index < 4 %>
-          <div class="welcome-item-height">
-            <%= link_to food_path(food) do %>
-            <%= image_tag(food.image.url(:small), class: "card-width-11") %>
-            <% end %>
-            <h4>
-              <a>
-                <%= link_to food.name, food_path(food) %>
-              </a>
-            </h4>
-          </div>
-        <% elsif index.between?(4,7) %>
-          <div class="welcome-item-height">
-            <%= link_to food_path(food) do %>
-            <%= image_tag(food.image.url(:small), class: "card-width-11") %>
-            <% end %>
-            <h4>
-              <a>
-                <%= link_to food.name, food_path(food) %>
-              </a>
-            </h4>
-          </div>
-        <% elsif index > 7 %>
-          <div class="welcome-item-height">
-            <%= link_to food_path(food) do %>
-            <%= image_tag(food.image.url(:small), class: "card-width-11") %>
-            <% end %>
-            <h4>
-              <a>
-                <%= link_to food.name, food_path(food) %>
-              </a>
-            </h4>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-
-<br>
-<div class="container-fluid">
-  <div class="wrapper">
-    <div class="scroll-wrapper">
-      <div class="welcome-item-height food-box">
-        <a href="/foods"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-        <br>
-        Shop
-      </div>
-      <% @shops.each_with_index do |shop, index| %>
-        <% if index < 4 %>
-          <div class="welcome-item-height">
-            <%= link_to shop_path(shop) do %>
-            <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
-            <% end %>
-            <h4>
-              <a>
-                <%= link_to shop.name, shop_path(shop) %>
-              </a>
-            </h4>
-          </div>
-        <% elsif index.between?(4,7) %>
-          <div class="welcome-item-height">
-            <%= link_to shop_path(shop) do %>
-            <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
-            <% end %>
-            <h4>
-              <a>
-                <%= link_to shop.name, shop_path(shop) %>
-              </a>
-            </h4>
-          </div>
-        <% elsif index > 7 %>
-          <div class="welcome-item-height">
-            <%= link_to shop_path(shop) do %>
-            <%= image_tag(shop.image.url(:small), class: "card-width-11") %>
-            <% end %>
-            <h4>
-              <a>
-                <%= link_to shop.name, shop_path(shop) %>
-              </a>
-            </h4>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
-<br>
-<div class="container-fluid">
-  <div class="wrapper">
-    <div class="scroll-wrapper">
-      <div class="welcome-item-height food-box">
-        <a href="/foods"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></a>
-        <br>
-        Community
-      </div>
-      <% @communities.each_with_index do |community, index| %>
-        <% if index < 4 %>
-          <div class="welcome-item-height">
-            <%= link_to community_path(community) do %>
-            <%= image_tag(community.image.url(:small), class: "card-width-11") %>
-            <% end %>
-            <h4>
-              <a>
-                <%= link_to community.name, community_path(community) %>
-              </a>
-            </h4>
-          </div>
-        <% elsif index.between?(4,7) %>
-          <div class="welcome-item-height">
-            <%= link_to community_path(community) do %>
-            <%= image_tag(community.image.url(:small), class: "card-width-11") %>
-            <% end %>
-            <h4>
-              <a>
-                <%= link_to community.name, community_path(community) %>
-              </a>
-            </h4>
-          </div>
-        <% elsif index > 7 %>
-          <div class="welcome-item-height">
-            <%= link_to community_path(community) do %>
-            <%= image_tag(community.image.url(:small), class: "card-width-11") %>
-            <% end %>
-            <h4>
-              <a>
-                <%= link_to community.name, community_path(community) %>
-              </a>
-            </h4>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<br>
-
-<div class="container-fluid">
+<div class="container">
   <div class="col-md-6 col-xs-6">
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/JK3o0ZAwIqk" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/sWWP-OaJ6Y0" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
   <div class="col-md-6 col-xs-6">
     <div class="video-container">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/wFGCr9KsqUA" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container">
+  <% @events.each do |event| %>
+    <%= image_tag(event.image.url(:thumb)) %>
+  <% end %>
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <h1 class="upcoming-events">Upcoming <span class="font-blue">Events</span></h1>
+    <div class="event-header">
+      <%= button_to "Post An Event", new_event_path, :class => "post-event-button", :method => :get %>
+      <p class="display-inline font-italic">
+        Where to go out, dance, and revel. Hand-picked events in Portland, curated by a team with combined decades in town.
+      </p>
+    </div>
+  </div>
+  <div class="row event-bar">
+    <div class="col-md-12">
+
+      <a href="/events">
+        <div class="col-md-2 col-xs-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            ALL EVENTS
+          </p>
+        </div>
+      </a>
+      <a href="/foods">
+        <div class="col-md-2 col-xs-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            SPORTS
+          </p>
+        </div>
+      </a>
+      <a href="/foods">
+        <div class="col-md-2 col-xs-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            DINING
+          </p>
+        </div>
+      </a>
+      <a href="/foods">
+        <div class="col-md-2 col-xs-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            COMMUNITY
+          </p>
+        </div>
+      </a>
+      <a href="/foods">
+        <div class="col-md-2 col-xs-2 event-box">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            ARTS
+          </p>
+        </div>
+      </a>
+      <a href="/foods">
+        <div class="col-md-2 col-xs-2 event-box no-border">
+          <i class="fa fa-home font-30" aria-hidden="true"></i>
+          <p>
+            NIGHTLIFE
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <p class="display-inline">
+      Date
+    </p>
+    <input class="display-inline" type="text_field" name="name" value="" placeholder="DATE">
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <% @events.each do |event| %>
+        <div class="well">
+          <div class="row">
+            <div class="col-md-2 col-xs-2">
+              <div class="">
+                <%= event.date.strftime("%B") %>
+                <span class="date-font">
+                  <%= event.date.strftime("%e") %>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-2 col-xs-2">
+              <div class="event-image">
+                <%= link_to event_path(event) do %>
+                  <%= image_tag(event.image.url(:thumb)) %>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-8 col-xs-8">
+              <p class="event-title">
+                <%= link_to event.name, event_path(event) %>
+              </p>
+              <%= event.location %>
+              <br>
+              <%= event.description %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <div class="well">
+        Stuff
+      </div>
     </div>
   </div>
 </div>

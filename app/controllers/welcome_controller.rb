@@ -7,6 +7,7 @@ class WelcomeController < ApplicationController
     # @foods = Food.all.order(:name).limit(12)
     @communities = Community.all.order(:name)
     @shops = Shop.all.order(:name)
+    @events = Event.all
   end
 
   # def set_locale

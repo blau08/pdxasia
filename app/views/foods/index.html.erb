@@ -12,7 +12,7 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="carousel-image-center img-responsive"src="/assets/pdxasialogo2.png" alt="Chania">
+          <img class="carousel-image-center img-responsive width-100"src="/assets/pdxasialogo2.png" alt="Chania">
         </div>
 
         <div class="item">
@@ -113,10 +113,10 @@
     </div>
   </div>
 </div> -->
-<div class="container-fluid restaurants-row">
+<div class="container">
   <div id="food-row" class="row">
     <% @foods.each do |food| %>
-      <div class="col-md-2 col-xs-4">
+      <div class="col-md-3 col-xs-3">
         <div class="food-item">
           <div class="food-image">
             <%= link_to food_path(food) do %>

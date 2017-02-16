@@ -22,17 +22,17 @@
 </div>
 <br>
 
-<div class="container">
+<div class="container" id="innerBoxContainer">
   <% @events.each do |event| %>
-    <div class="event-picture-block">
-      <div class="event-date-box">
-        <%= event.date.strftime("%^b %e") %>
+      <div class="innerBox">
+        <span class="date">
+          <%= event.date.strftime("%^b %e") %>
+        </span>
+        <%= link_to event_path(event), class:"link-margin" do %>
+          <%= image_tag(event.image.url(:small), :class =>"event-image") %>
+        <% end %>
       </div>
-      <%= link_to event_path(event), class:"link-margin" do %>
-        <%= image_tag(event.image.url(:small), :class =>"event-image") %>
-      <% end %>
-    </div>
-  <% end %>
+    <% end %>
 </div>
 <br>
 

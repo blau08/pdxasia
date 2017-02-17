@@ -3,11 +3,20 @@
 
 </div>
 <br>
-<div class="container" style="text-align: center;">
-  <%= social_share_button_tag("Portland Asia - Events, news, all things Asian in Portland", :url => "http://www.portlandasia.com") %>
+
+<div class="container" id="innerBoxContainer">
+  <% @events.each do |event| %>
+    <div class="flex-item">
+        <%= link_to event_path(event), class:"link-margin" do %>
+          <%= image_tag(event.image.url(:small), class: "event-image") %>
+        <% end %>
+        <span class="event-date-box">
+          <strong><%= event.date.strftime("%^b %e") %></strong> - <small><%= event.name %></small>
+        </span>
+      </div>
+    <% end %>
 </div>
 <br>
-
 <div class="container">
   <div class="col-md-6 col-xs-6">
     <div class="video-container">
@@ -22,33 +31,8 @@
 </div>
 <br>
 
-<!-- <div class="container" id="innerBoxContainer">
-  <% @events.each do |event| %>
-      <div class="innerBox">
-        <span class="date">
-          <%= event.date.strftime("%^b %e") %>
-        </span>
-        <%= link_to event_path(event), class:"link-margin" do %>
-          <%= image_tag(event.image.url(:small), :class =>"event-image") %>
-        <% end %>
-      </div>
-    <% end %>
-</div>
-<br> -->
-<section style="height: 100px; background-color: gray; font-size: 50px; color: white; font-weight: bold; text-align: center; ">
-  Events
-</section>
-<div class="container" id="innerBoxContainer">
-  <% @events.each do |event| %>
-    <div class="flex-item">
-        <%= link_to event_path(event), class:"link-margin" do %>
-          <%= image_tag(event.image.url(:small), class: "event-image") %>
-        <% end %>
-        <span class="event-date-box">
-          <%= event.date.strftime("%^b %e") %>
-        </span>
-      </div>
-    <% end %>
+<div class="container" style="text-align: center;">
+  <%= social_share_button_tag("Portland Asia - Events, news, all things Asian in Portland", :url => "http://www.portlandasia.com") %>
 </div>
 <br>
 

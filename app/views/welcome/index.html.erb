@@ -1,9 +1,12 @@
-
 <div id="banner2">
 
 </div>
 <br>
-
+<div class="container">
+  <div class="row">
+    <h1 class="upcoming-events">Upcoming <span class="font-blue">Events</span></h1>
+  </div>
+</div>
 <div class="container" id="innerBoxContainer">
   <% @events.each do |event| %>
     <div class="flex-item">
@@ -15,24 +18,22 @@
         </span>
       </div>
     <% end %>
-</div>
+  </div>
 <br>
 <div class="container">
-  <div class="col-md-6 col-xs-6">
-    <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/sWWP-OaJ6Y0" frameborder="0" allowfullscreen></iframe>
+  <div class="row">
+    <h1 class="upcoming-events">Featured <span class="font-blue">Videos</span></h1>
+    <div class="col-md-6 col-xs-6">
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sWWP-OaJ6Y0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-6">
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wFGCr9KsqUA" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
-  <div class="col-md-6 col-xs-6">
-    <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/wFGCr9KsqUA" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-<br>
-
-<div class="container" style="text-align: center;">
-  <%= social_share_button_tag("Portland Asia - Events, news, all things Asian in Portland", :url => "http://www.portlandasia.com") %>
 </div>
 <br>
 
@@ -144,3 +145,8 @@
     </div>
   </div>
 </div>
+
+<div class="container" style="text-align: center;">
+  <%= social_share_button_tag("Portland Asia - Events, news, all things Asian in Portland", :url => "http://www.portlandasia.com") %>
+</div>
+<br>

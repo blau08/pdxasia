@@ -600,6 +600,8 @@ html { height: 100%;}
     z-index: 1;
 }
 
+.fp-event-box { padding-left: 0; padding-right: 0;}
+
 @import "events";
 @import "welcome";
 @import "videos";

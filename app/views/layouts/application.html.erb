@@ -6,7 +6,9 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="description" content="Portland ASIA is the largest online site for the Asian community in Portland, OR for food, shopping, events, and people. ">
   <meta name=viewport content="width=device-width, initial-scale=1">
+  <%= analytics_init if GoogleAnalytics.valid_tracker? %>
 </head>
 <body>
 <div id="wrapper">

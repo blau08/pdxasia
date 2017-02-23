@@ -78,7 +78,7 @@
       <% @events.each do |event| %>
         <div class="well">
           <div class="row">
-            <div class="col-md-2 col-xs-2">
+            <div class="col-md-2 col-sm-2 col-xs-4">
               <div class="">
                 <%= event.date.strftime("%B") %>
                 <span class="date-font">
@@ -86,14 +86,14 @@
                 </span>
               </div>
             </div>
-            <div class="col-md-2 col-xs-2">
+            <div class="col-md-2 col-sm-2 col-xs-4">
               <div class="event-image">
                 <%= link_to event_path(event) do %>
                   <%= image_tag(event.image.url(:thumb)) %>
                 <% end %>
               </div>
             </div>
-            <div class="col-md-8 col-xs-8">
+            <div class="col-md-8 col-sm-6 col-xs-12">
               <p class="event-title">
                 <%= link_to event.name, event_path(event) %>
               </p>

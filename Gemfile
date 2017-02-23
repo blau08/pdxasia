@@ -14,6 +14,7 @@ gem 'font-awesome-sass'
 gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 gem 'globalize', '~> 5.0.0'
 gem 'social-share-button'
+gem 'google-analytics-rails', '1.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

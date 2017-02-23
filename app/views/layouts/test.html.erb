@@ -1,0 +1,146 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div id="wrapper">
+      <div class="overlay"></div>
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+          <ul class="nav sidebar-nav">
+              <li class="sidebar-brand">
+                  <a href="#">
+                     Portland Asia
+                  </a>
+              </li>
+              <li>
+                  <a href="#">Home</a>
+              </li>
+              <li>
+                  <a href="#">About</a>
+              </li>
+              <li>
+                <%= link_to pictures_path do %>
+                <i class="fa fa-camera" aria-hidden="true"></i> <%= t('layouts.application.picture') %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to videos_path do %>
+                <i class="fa fa-video-camera" aria-hidden="true"></i> <%= t('layouts.application.video') %>
+                <% end %>
+              </li>
+              <li>
+                  <a href="#">Events</a>
+              </li>
+              <li>
+                  <a href="#">Team</a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="dropdown-header">Dropdown heading</li>
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              <li>
+                  <a href="#">Services</a>
+              </li>
+              <li>
+                  <a href="#">Contact</a>
+              </li>
+              <li>
+                  <a href="https://twitter.com/maridlcrmn">Follow me</a>
+              </li>
+          </ul>
+      </nav>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+              <span class="hamb-top"></span>
+        <span class="hamb-middle"></span>
+      <span class="hamb-bottom"></span>
+          </button>
+      </div>
+      <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <div class="navbar-header">
+    <!-- <a class="navbar-brand" href="/"><img class="pdxasialogo img-responsive" src="/assets/pdxasialogo1.png" alt="" /></a> -->
+    <a class="navbar-logo" href="/">Portland <span>A</span><span class="orange-logo">S</span><span class="yellow-logo">I</span><span>A</span> </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li>
+      <%= link_to foods_path do %>
+        <i class="fa fa-cutlery" aria-hidden="true"></i> <%= t('layouts.application.food') %>
+        <% end %>
+      </li>
+      <li>
+        <%=link_to events_path do %>
+        <i class="fa fa-calendar" aria-hidden="true"></i> <%= t('layouts.application.event') %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to shops_path do %>
+        <i class="fa fa-shopping-bag" aria-hidden="true"></i> <%= t('layouts.application.shop') %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to communities_path do %>
+        <i class="fa fa-lightbulb-o" aria-hidden="true"></i> <%= t('layouts.application.community') %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to services_path do %>
+        <i class="fa fa-video-camera" aria-hidden="true"></i> <%= t('layouts.application.service') %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "EN", locale: "en" %>
+      </li>
+      <li>
+        <%= link_to "中文", locale: "zh" %>
+      </li>
+
+      <!-- <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li> -->
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="social-links"><a href="/"><i class="fa fa-home font-25" aria-hidden="true"></i></a></li>
+          <li class="social-links"><a href="https://www.facebook.com/pdxasia/"><i class="fa fa-facebook-square font-25" aria-hidden="true"></i></a></li>
+          <li class="social-links"><a href="https://www.instagram.com/pdxasia/"><i class="fa fa-instagram font-25" aria-hidden="true"></i></a></li>
+          <li class="social-links"><a href="https://twitter.com/portlandasia"><i class="fa fa-twitter font-25" aria-hidden="true"></i></a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul> -->
+      </li>
+      <li class="social-links"><a href="/"><i class="fa fa-home font-25" aria-hidden="true"></i></a></li>
+      <li class="social-links"><a href="https://www.facebook.com/pdxasia/"><i class="fa fa-facebook-square font-25" aria-hidden="true"></i></a></li>
+      <li class="social-links"><a href="https://www.instagram.com/pdxasia/"><i class="fa fa-instagram font-25" aria-hidden="true"></i></a></li>
+      <li class="social-links"><a href="https://twitter.com/portlandasia"><i class="fa fa-twitter font-25" aria-hidden="true"></i></a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223091111) do
+ActiveRecord::Schema.define(version: 20170307234313) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,10 @@ ActiveRecord::Schema.define(version: 20170223091111) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "bio"
+    t.string   "slug"
   end
+
+  add_index "communities", ["slug"], name: "index_communities_on_slug", unique: true, using: :btree
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
@@ -54,7 +57,10 @@ ActiveRecord::Schema.define(version: 20170223091111) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "slug"
   end
+
+  add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
 
   create_table "food_translations", force: :cascade do |t|
     t.integer  "food_id",    null: false
@@ -79,7 +85,23 @@ ActiveRecord::Schema.define(version: 20170223091111) do
     t.datetime "image_updated_at"
     t.string   "yelp"
     t.string   "youtube"
+    t.string   "slug"
   end
+
+  add_index "foods", ["slug"], name: "index_foods_on_slug", unique: true, using: :btree
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "pictures", force: :cascade do |t|
     t.datetime "created_at",         null: false
@@ -108,7 +130,10 @@ ActiveRecord::Schema.define(version: 20170223091111) do
     t.datetime "image_updated_at"
     t.text     "about"
     t.string   "youtube"
+    t.string   "slug"
   end
+
+  add_index "services", ["slug"], name: "index_services_on_slug", unique: true, using: :btree
 
   create_table "shops", force: :cascade do |t|
     t.string   "name"
@@ -123,7 +148,10 @@ ActiveRecord::Schema.define(version: 20170223091111) do
     t.string   "yelp"
     t.string   "phone"
     t.string   "youtube"
+    t.string   "slug"
   end
+
+  add_index "shops", ["slug"], name: "index_shops_on_slug", unique: true, using: :btree
 
   create_table "videos", force: :cascade do |t|
     t.datetime "created_at", null: false

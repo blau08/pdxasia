@@ -21,7 +21,7 @@ class ShopsController < ApplicationController
   end
 
   def show
-    @shop = Shop.find(params[:id])
+    @shop = Shop.friendly.find(params[:id])
   end
 
   def update

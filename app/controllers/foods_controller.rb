@@ -39,7 +39,7 @@ class FoodsController < ApplicationController
   end
 
   def show
-    @food = Food.find(params[:id])
+    @food = Food.friendly.find(params[:id])
 
     add_breadcrumb @food.name, food_path([:id])
   end

@@ -31,7 +31,7 @@ class CommunitiesController < ApplicationController
   end
 
   def show
-    @community = Community.find(params[:id])
+    @community = Community.friendly.find(params[:id])
   end
 
   def update

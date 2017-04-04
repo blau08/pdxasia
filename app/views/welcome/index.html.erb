@@ -17,25 +17,25 @@
   </div>
 </div>
 <br>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <h1 class="upcoming-events">Upcoming <span class="font-blue">Events</span></h1>
   </div>
 </div>
-<div class="container-fluid">
-  <% @events.each do |event| %>
-    <div class="col-md-4 col-sm-6 col-xs-6 fp-event-box">
+<div class="container">
+  <% @eventsbox.each do |event| %>
+    <div class="col-md-4 col-sm-4 col-xs-4 fp-event-box">
       <%= link_to event_path(event), class:"link-margin" do %>
         <%= image_tag(event.image.url(:small), class: "event-image") %>
       <% end %>
       <div class="event-date-box">
-        <strong><%= event.date.strftime("%^b %e") %></strong> - <small><%= event.name %></small>
+        <strong><%= event.date.strftime("%^b %e") %></strong> - <small><%=h truncate(event.name, length: 20) %></small>
       </div>
     </div>
   <% end %>
 </div>
 <br>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <h1 class="upcoming-events">Featured <span class="font-blue">Videos</span></h1>
     <div class="col-md-6 col-sm-12">
@@ -51,8 +51,43 @@
   </div>
 </div>
 <br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+        <div class="fp-well">
+          <h1 class="upcoming-events-small">Featured <span class="font-blue">Food</span></h1>
+          <% @foods.each do |food| %>
+          <%=h link_to truncate(food.name, length: 50), food_path(food) %>
+          <br>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+        <div class="fp-well">
+          <h1 class="upcoming-events-small">Featured <span class="font-blue">Shop</span></h1>
+          <% @shops.each do |shop| %>
+          <%=h link_to truncate(shop.name, length: 50), shop_path(shop) %>
+          <br>
+          <% end %>
+        </div>
+      </div>
 
-<div class="container-fluid">
+      <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+        <div class="fp-well-last">
+          <h1 class="upcoming-events-small">Featured <span class="font-blue">People</span></h1>
+          <% @services.each do |service| %>
+          <%=h link_to truncate(service.set_fullname, length: 50), service_path(service) %>
+          <br>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container">
   <div class="row">
     <h1 class="upcoming-events">Upcoming <span class="font-blue">Events</span></h1>
     <div class="event-header">

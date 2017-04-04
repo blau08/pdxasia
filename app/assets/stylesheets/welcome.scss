@@ -31,9 +31,11 @@
         display: block;
         color: white;
         text-align: center;
-        padding: 14px 16px;
+        padding: 14px 14px;
         text-decoration: none;
     }
+
+    li.social-links a { padding: 14px 10px; }
 
     li a:hover:not(.active) {
         background-color: #111;
@@ -66,4 +68,12 @@ span.glyphicon-search { color: white; }
   float: left;
   width: 165px;
   position: relative;
+}
+
+.fp-well { padding: 15px; border-radius: 0; background-color: white; border-left: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black; height: 10em; }
+.fp-well-last { padding: 15px; border-radius: 0; background-color: white; border: 1px solid black; height: 10em; }
+@media (max-width: 767px) {
+  .fp-well { border-top: 1px solid black; border-right: 1px solid black; border-left: 1px solid black; border-bottom: none; a { font-size: 1em; } }
+  .fp-well-last { border-bottom: 1px solid black; a { font-size: 1em; } }
+  .upcoming-events-small { font-size: 1em; }
 }

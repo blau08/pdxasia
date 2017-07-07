@@ -16,6 +16,8 @@ gem 'globalize', '~> 5.0.0'
 gem 'social-share-button'
 gem 'google-analytics-rails', '1.1.0'
 gem 'friendly_id', '~> 5.1.0'
+gem 'pdfkit'
+gem 'simple_form', '~> 3.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

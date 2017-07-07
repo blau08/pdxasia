@@ -2,48 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#banner2 {
-  background-image: url('/assets/events/restaurant.jpg');
-  min-height:189px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 @media (max-width: 767px) {
   #banner2 {
     min-height: 100px;
   }
-}
-
-.home-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    width: 100%;
-
-    li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 14px;
-        text-decoration: none;
-    }
-
-    li.social-links a { padding: 14px 10px; }
-
-    li a:hover:not(.active) {
-        background-color: #111;
-    }
-
-    .active {
-        background-color: $green;
-    }
 }
 
 .container .row .search-bar .form-group { z-index: 1;}

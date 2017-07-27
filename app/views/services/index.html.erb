@@ -51,3 +51,35 @@
     <% end %>
   </table>
 </div>
+<div class="container">
+  <% @services.each do |service| %>
+    <!-- <div class="col-md-4">
+
+      <div class="card" style="width: 20rem;">
+        <%= image_tag service.image.url(:small), class: "card-img-top"  %>
+        <div class="card-block">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-md-6">
+      <div class="col-md-5">
+        <%= image_tag service.image.url(:small), class: "w-100"  %>
+      </div>
+      <div class="col-md-6">
+        <div class="card-block">
+          <h4 class="card-title">
+            <%= service.first + " " + service.last + " - " + service.company %>
+          </h4>
+          <p>
+            <%= service.industry %>
+          </p>
+          <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+    <% end %>
+</div>

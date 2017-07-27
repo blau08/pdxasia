@@ -64,11 +64,11 @@
         </div>
       </div>
     </div> -->
-    <div class="col-md-6">
-      <div class="col-md-5">
-        <%= image_tag service.image.url(:small), class: "w-100"  %>
+    <div class="col-md-6 col-xs-12">
+      <div class="col-md-5 col-xs-5">
+        <%= image_tag service.image.url(:small), class: "img-responsive"  %>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 col-xs-7">
         <div class="card-block">
           <h4 class="card-title">
             <%= service.first + " " + service.last + " - " + service.company %>

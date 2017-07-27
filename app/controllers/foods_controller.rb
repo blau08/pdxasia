@@ -45,7 +45,7 @@ class FoodsController < ApplicationController
   end
 
   def update
-    @food = Food.find(params[:id])
+    @food = Food.friendly.find(params[:id])
     if @food.update(food_params)
       redirect_to food_path(@food)
     else

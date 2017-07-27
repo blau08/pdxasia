@@ -35,7 +35,7 @@ class CommunitiesController < ApplicationController
   end
 
   def update
-    @community = Community.find(params[:id])
+    @community = Community.friendly.find(params[:id])
     if @community.update(community_params)
       redirect_to communities_path
     else

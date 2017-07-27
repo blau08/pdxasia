@@ -20,11 +20,11 @@ class ServicesController < ApplicationController
   end
 
   def edit
-    @service = Service.find(params[:id])
+    @service = Service.friendly.find(params[:id])
   end
 
   def update
-    @service = Service.find(params[:id])
+    @service = Service.friendly.find(params[:id])
     if @service.update(service_params)
       redirect_to service_path(@service)
     else

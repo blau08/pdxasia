@@ -25,7 +25,7 @@ class ShopsController < ApplicationController
   end
 
   def update
-    @shop = Shop.find(params[:id])
+    @shop = Shop.friendly.find(params[:id])
     if @shop.update(shop_params)
       redirect_to shop_path(@shop)
     else

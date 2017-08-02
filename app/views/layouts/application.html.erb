@@ -12,58 +12,58 @@
   <%= analytics_init if GoogleAnalytics.valid_tracker? %>
 </head>
 <body>
-<div id="wrapper">
+  <div id="wrapper">
 
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
-                    Menu
-                </a>
-            </li>
-            <li>
-            <%= link_to foods_path do %>
-              <i class="fa fa-cutlery" aria-hidden="true"></i> <%= t('layouts.application.food') %>
-              <% end %>
-            </li>
-            <li>
-              <%=link_to events_path do %>
-              <i class="fa fa-calendar" aria-hidden="true"></i> <%= t('layouts.application.event') %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to shops_path do %>
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i> <%= t('layouts.application.shop') %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to communities_path do %>
-              <i class="fa fa-lightbulb-o" aria-hidden="true"></i> <%= t('layouts.application.community') %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to pictures_path do %>
-              <i class="fa fa-camera" aria-hidden="true"></i> <%= t('layouts.application.picture') %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to videos_path do %>
-              <i class="fa fa-video-camera" aria-hidden="true"></i> <%= t('layouts.application.video') %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to services_path do %>
-              <i class="fa fa-video-camera" aria-hidden="true"></i> <%= t('layouts.application.service') %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "EN", locale: "en" %>
-            </li>
-            <li>
-              <%= link_to "中文", locale: "zh" %>
-            </li>
-        </ul>
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="#">
+            Menu
+          </a>
+        </li>
+        <li>
+          <%= link_to foods_path do %>
+          <i class="fa fa-cutlery" aria-hidden="true"></i> <%= t('layouts.application.food') %>
+          <% end %>
+        </li>
+        <li>
+          <%=link_to events_path do %>
+          <i class="fa fa-calendar" aria-hidden="true"></i> <%= t('layouts.application.event') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to shops_path do %>
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i> <%= t('layouts.application.shop') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to communities_path do %>
+          <i class="fa fa-lightbulb-o" aria-hidden="true"></i> <%= t('layouts.application.community') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to pictures_path do %>
+          <i class="fa fa-camera" aria-hidden="true"></i> <%= t('layouts.application.picture') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to videos_path do %>
+          <i class="fa fa-video-camera" aria-hidden="true"></i> <%= t('layouts.application.video') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to services_path do %>
+          <i class="fa fa-video-camera" aria-hidden="true"></i> <%= t('layouts.application.service') %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "EN", locale: "en" %>
+        </li>
+        <li>
+          <%= link_to "中文", locale: "zh" %>
+        </li>
+      </ul>
     </div>
     <!-- /#sidebar-wrapper -->
 
@@ -76,52 +76,85 @@
             <div class="col-lg-12">
               <a href="#menu-toggle" class="btn btn-default btn-nav" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
               <a class="navbar-logo" href="/"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
-<span class="sr-only">Loading...</span> Portland <span>A</span><span class="orange-logo">S</span><span class="yellow-logo">I</span><span>A</span> </a>
-            </div>
-            <div class="row home-nav">
-              <ul>
-                <li><a class="active" href="/welcome/index">Home</a></li>
-                <li><a href="#news">Blog</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="/foods">Food</a></li>
-                <li><a href="/services">People</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-          <!-- <div class="container home-nav">
-            <div class="row">
-              <div class="">
+                <span class="sr-only">Loading...</span> Portland <span>A</span><span class="orange-logo">S</span><span class="yellow-logo">I</span><span>A</span> </a>
+              </div>
+              <div class="row home-nav">
                 <ul>
-                  <li><a class="active" href="#home">Home</a></li>
+                  <li><a class="active" href="/welcome/index">Home</a></li>
                   <li><a href="#news">Blog</a></li>
                   <li><a href="#news">News</a></li>
-                  <li><a href="#news">Food</a></li>
-                  <li class="social-links"  style="float: right;" ><a href="https://www.instagram.com/pdxasia/"><i class="fa fa-instagram font-25" aria-hidden="true"></i></a></li>
-                  <li class="social-links"  style="float: right;" ><a href="https://twitter.com/portlandasia"><i class="fa fa-twitter font-25" aria-hidden="true"></i></a></li>
-                  <li class="social-links"  style="float: right;" ><a href="https://www.facebook.com/pdxasia/"><i class="fa fa-facebook-square font-25" aria-hidden="true"></i></a></li>
+                  <li><a href="/foods">Food</a></li>
+                  <li><a href="/services">People</a></li>
                 </ul>
               </div>
             </div>
-          </div> -->
+          </div>
+
         </nav>
         <%= yield %>
-        </div>
+      </div>
+
+      <footer class="text-center">
+        <div class="footer-above">
+          <div class="container">
+            <div class="row">
+              <div class="footer-col col-md-4">
+                <h3>Location</h3>
+                <p>12345 SE Happy Valley Drive
+                  <br>Portland, OR 97086</p>
+                </div>
+                <div class="footer-col col-md-4">
+                  <h3>Around the Web</h3>
+                  <ul class="list-inline">
+                    <li>
+                      <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                  <h3>About Portland ASIA</h3>
+                  <p>Portland ASIA is the largest online community of Asian businesses in Portland.</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-below">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  Copyright &copy; Portland ASIA 2017
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- /#page-content-wrapper -->
+
     </div>
-    <!-- /#page-content-wrapper -->
 
-</div>
+    <script src="js/jquery.js"></script>
 
-<script src="js/jquery.js"></script>
-
-<script>
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
-});
-</script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 
 
 
-</body>
-</html>
+  </body>
+  </html>

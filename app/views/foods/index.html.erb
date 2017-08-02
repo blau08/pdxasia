@@ -116,15 +116,17 @@
 <div class="container">
   <div class="row">
     <% @foods.each do |food| %>
-      <div class="col-md-4 col-xs-4">
+      <div class="col-md-3 col-xs-12">
         <div class="food-item">
           <div class="food-image">
             <%= link_to food_path(food) do %>
-              <%= image_tag(food.image.url(:small), class: "food-image-tag") %>
+              <%= image_tag(food.image.url(:thumb), class: "food-image-tag") %>
             <% end %>
           </div>
           <div class="food-text">
             <%= link_to food.name, food_path(food) %>
+            <br>
+            <%= food.phone %>
           </div>
         </div>
       </div>

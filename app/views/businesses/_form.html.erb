@@ -1,0 +1,42 @@
+<%= render "layouts/errors", :object => @business %>
+
+<%= form_for @business, html: { multipart: true } do |f| %>
+  <%= f.label :name %>:
+  <br>
+  <%= f.text_field :name %><br />
+  <br>
+  <%= f.label :number %>:
+  <br>
+  <%= f.text_field :number %><br />
+  <br>
+  <%= f.label :industry %>
+  <br>
+  <%= f.text_field :industry %>
+  <br>
+  <%= f.label :address %>
+  <br>
+  <%= f.text_field :address %>
+  <br>
+  <%= f.label :website %>
+  <br>
+  <%= f.text_field :website %>
+  <br>
+  <%= f.label :youtube %>
+  <br>
+  <%= f.text_field :youtube %>
+  <br>
+  <%= f.label :yelp %>
+  <br>
+  <%= f.text_field :yelp %>
+  <br>
+  <%= f.label :description %>
+  <br>
+  <%= f.text_field :description %>
+  <br>
+  <br>
+  <%= f.label :image %>: Image Photo
+  <%= f.file_field :image %>
+  <br>
+
+  <%= f.submit %>
+<% end %>

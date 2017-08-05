@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :pictures
     resources :videos
     resources :services
+    resources :businesses
     root 'welcome#index'
   end
   get '/*path', to: redirect("/#{I18n.default_locale}/%{path}")

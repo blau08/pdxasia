@@ -1,8 +1,8 @@
 <br>
 <div class="container">
   <header class="jumbotron hero-spacer">
-    <h1>People</h1>
-    <p>Find a professional and connect!</p>
+    <h1>Business</h1>
+    <p>Find a business and connect!</p>
   </header>
 </div>
 <div class="container">
@@ -22,7 +22,7 @@
         Language
       </th>
       <th>
-        Company
+        Description
       </th>
       <th>
         Industry
@@ -31,39 +31,39 @@
         Website
       </th>
     </tr>
-    <% @services.each_with_index do |service, index| %>
+    <% @businesses.each_with_index do |business, index| %>
       <tr>
         <td>
           <%= index + 1 %>
         </td>
         <td>
-          <%= link_to service.first + " " + service.last, service_path(service) %>
+          <%= link_to business.name, business_path(business) %>
         </td>
         <td>
-          <%= service.number %>
+          <%= business.number %>
         </td>
         <td>
-          <%= service.language %>
+          <%= business.address %>
         </td>
         <td>
-          <%= service.company %>
+          <%= business.description %>
         </td>
         <td class="col-md-2">
-          <%= service.industry %>
+          <%= business.industry %>
         </td>
         <td class="col-xs-2" style="flex: wrap; ">
-          <a href="<%= service.website %>"><%= service.website %></a>
+          <a href="<%= business.website %>"><%= business.website %></a>
         </td>
       </tr>
     <% end %>
   </table>
 </div>
 <div class="container">
-  <% @services.each do |service| %>
+  <% @businesses.each do |business| %>
     <!-- <div class="col-md-4">
 
       <div class="card" style="width: 20rem;">
-        <%= image_tag service.image.url(:small), class: "card-img-top"  %>
+        <%= image_tag business.image.url(:small), class: "card-img-top"  %>
         <div class="card-block">
           <h4 class="card-title">Card title</h4>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -73,15 +73,15 @@
     </div> -->
     <div class="col-md-6 col-xs-12">
       <div class="col-md-5 col-xs-5">
-        <%= image_tag service.image.url(:small), class: "img-responsive"  %>
+        <%= image_tag business.image.url(:small), class: "img-responsive"  %>
       </div>
       <div class="col-md-6 col-xs-7">
         <div class="card-block">
           <h4 class="card-title">
-            <%= service.first + " " + service.last + " - " + service.company %>
+            <%= business.name %>
           </h4>
           <p>
-            <%= service.industry %>
+            <%= business.industry %>
           </p>
           <p class="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
           <a href="#" class="btn btn-primary">Read More</a>

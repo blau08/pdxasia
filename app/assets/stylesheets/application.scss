@@ -664,6 +664,12 @@ footer .footer-below {
   font-size: 20px;
   line-height: 45px;
 }
+.jumbotron {
+  margin-bottom: 0;
+  text-align: center;
+  background-color: #03B160;
+  color: white;
+}
 
 @import "events";
 @import "welcome";

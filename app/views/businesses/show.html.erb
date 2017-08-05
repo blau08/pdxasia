@@ -1,0 +1,44 @@
+<br>
+<br>
+<div class="container">
+  <div class="col-md-4">
+    <div class="well">
+      <%= image_tag @business.image.url(:large), class: "img-responsive" %>
+    </div>
+    <div class="well">
+      <p class="restaurant-title">
+        <%= @business.name %>
+      </p>
+      <p>
+        <%= @business.industry %>
+      </p>
+      <p class="restaurant-address">
+        <%= @business.number %>
+      </p>
+      <p>
+        <%= @business.address %>
+      </p>
+        <a href="<%= @business.website %>"><%= @business.website %></a>
+      <br>
+      <%= link_to "Edit", edit_business_path(@business) %>
+      <br>
+      <!-- <p>
+        <%= link_to "Delete", food_path(@business), method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
+      </p> -->
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="well">
+      <div class="video-container">
+        <iframe width="560" height="315" src="<%= @business.youtube %>" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="well">
+      <h4>About</h4>
+      <%= @business.description %>
+    </div>
+    <div class="well">
+      <h4>Tags</h4>
+    </div>
+  </div>
+</div>

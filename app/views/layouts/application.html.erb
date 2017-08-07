@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portland Asia</title>
+  <title>
+    <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+    Portland ASIA
+  </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link rel="icon" href="/favicon.png">

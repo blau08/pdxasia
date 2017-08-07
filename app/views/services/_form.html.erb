@@ -1,3 +1,6 @@
+<div class="container">
+  <div class="col-md-6">
+
 <%= render "layouts/errors", :object => @service %>
 
 <%= form_for @service, html: { multipart: true } do |f| %>
@@ -42,5 +45,8 @@
   <%= f.file_field :image %>
   <br>
 
-  <%= f.submit %>
+  <%= f.submit class: "form-control btn-success" %>
 <% end %>
+
+  </div>
+</div>

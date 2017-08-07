@@ -30,7 +30,6 @@ class FoodsController < ApplicationController
   def new
     @food = Food.new
     5.times { @food.pictures.build }
-    3.times { @food.categories.build }
   end
 
   def edit
